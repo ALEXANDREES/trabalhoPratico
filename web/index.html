@@ -1,84 +1,184 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-<head>
-  <!-- CSS  -->
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-	<link href="js/materialize.js" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>LocaPlus</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/half-slider.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+	  <img src='imagens/icon.png'>
+        <a class="navbar-brand" href="#">LocaPlus</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Inicio
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Veiculos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Locação</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <!-- Slide One - Set the background image for this slide in the line below -->
+          <div class="carousel-item active" style="background-image: url('http://placehold.it/1900x1080')">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>First Slide</h3>
+              <p>This is a description for the first slide.</p>
+            </div>
+          </div>
+          <!-- Slide Two - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="background-image: url('imagens/amarok.jpg')">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Second Slide</h3>
+              <p>This is a description for the second slide.</p>
+            </div>
+          </div>
+          <!-- Slide Three - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="background-image: url('imagens/palio.jpg')">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Third Slide</h3>
+              <p>This is a description for the third slide.</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+	  
+	  
+	  
+	  
+	     <!-- Page Content -->
+    <div class="container">
+
+      <div class="row">
+        <div class="col-sm-8">
+		
+          <h2 class="mt-4">VAMOS VIAJAR DE CARRO?<img src='imagens/iconav.png'></h2>
+          <p>TEMOS CARROS INCRIVEIS PARA CURTIR​​​</p>
+          <p></p>
+          <p>
+            <a class="btn btn-primary btn-lg" href="#">CONFIRA &raquo;</a>
+          </p>
+        </div>
+        <div class="col-sm-4">
+          <h2 class="mt-4">Entre em contato</h2>
+          <address>
+            <strong>LocaPlus</strong>
+            <br>Dourados - MS
+            <br>Rua___, Nº
+            <br>
+          </address>
+          <address>
+            <abbr>Telefone:</abbr>
+            (67) 9 9999-9999
+            <br>
+            <abbr title="Email"></abbr>
+            <a href="mailto:#">loca@locaplus.com.br</a>
+          </address>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <div class="row">
+        <div class="col-sm-4 my-4">
+          <div class="card">
+            <img class="card-img-top" src="imagens/carro1.jpg" alt="">
+            <div class="card-body">
+              <h4 class="card-title">POLO</h4>
+              <p class="card-text">TEXTO</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Alugar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 my-4">
+          <div class="card">
+            <img class="card-img-top" src="imagens/carro2.jpg">
+            <div class="card-body">
+              <h4 class="card-title">CIVIC 2018</h4>
+              <p class="card-text">TEXTO</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Alugar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 my-4">
+          <div class="card">
+            <img class="card-img-top" src="imagens/carro3.jpg">
+            <div class="card-body">
+              <h4 class="card-title">Q8</h4>
+              <p class="card-text">TEXTO</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Alugar</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.row -->
+    </header>
+
 	
-	<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-</head>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; LocaPlus 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
 
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<body>
-<nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">LocaPlus</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Clientes</a></li>
-        <li><a href="badges.html">Funcionario</a></li>
-<li><a href="badges.html">Locação</a></li>
-        <li><a href="collapsible.html">Veiculos</a></li>
-      </ul>
-    </div>
-	</nav>
-
-
-
-<!-- CAROUSEL  -->
-<div class="carousel carousel-slider center">
-    <div class="carousel-fixed-item center">
-      <a class="btn waves-effect white grey-text darken-text-2">button</a>
-    </div>
-    <div class="carousel-item red white-text" href="#one!">
-      <h2>First Panel</h2>
-      <p class="white-text">This is your first panel</p>
-    </div>
-    <div class="carousel-item amber white-text" href="#two!">
-      <h2>Second Panel</h2>
-      <p class="white-text">This is your second panel</p>
-    </div>
-    <div class="carousel-item green white-text" href="#three!">
-      <h2>Third Panel</h2>
-      <p class="white-text">This is your third panel</p>
-    </div>
-    <div class="carousel-item blue white-text" href="#four!">
-      <h2>Fourth Panel</h2>
-      <p class="white-text">This is your fourth panel</p>
-    </div>
-  </div>
-
-  
-  
-  
-  <!-- Footer  -->
-          <footer class="page-footer">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Sobre a empresa</h5>
-                <p class="grey-text text-lighten-4">
-Informações ao consumidor: LocaPlus <br>
-E-mail: Locaplus.br
-</p>
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            2018 Copyright
-            <a class="grey-text text-lighten-4 right" href="#!">Mais Informações</a>
-            </div>
-          </div>
-        </footer>
-		
-		
-		
-  <!--  Scripts-->
-  <script src="js/materialize.min.js"></script>
-  <script src="js/materialize.js"></script>
   </body>
+
 </html>
-
-
