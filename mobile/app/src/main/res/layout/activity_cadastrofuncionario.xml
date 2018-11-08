@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cadastrofuncionario">
+
+    <Button
+        android:id="@+id/btSalvar"
+        android:layout_width="90"
+        android:layout_height="50"
+        android:layout_marginStart="50dp"
+        android:text="Salvar"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="456dp" />
+
+    <Button
+        android:id="@+id/btSair"
+        android:layout_width="90"
+        android:layout_height="50"
+        android:layout_marginEnd="50dp"
+        android:text="Sair"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="456dp" />
+
+    <EditText
+        android:id="@+id/etNome"
+        android:layout_width="350"
+        android:layout_height="43"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="57dp" />
+
+    <TextView
+        android:id="@+id/tvNome"
+        android:layout_width="350"
+        android:layout_height="20"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:text="Digite seu Nome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="37dp" />
+
+    <TextView
+        android:id="@+id/tvRg"
+        android:layout_width="350"
+        android:layout_height="20"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:text="Informe seu RG"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="100dp" />
+
+    <EditText
+        android:id="@+id/etRg"
+        android:layout_width="350"
+        android:layout_height="43"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="120dp" />
+
+    <TextView
+        android:id="@+id/tvCpf"
+        android:layout_width="350"
+        android:layout_height="20"
+        android:text="Digite seu CPF"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="163dp" />
+
+    <EditText
+        android:id="@+id/etCpf"
+        android:layout_width="350"
+        android:layout_height="43"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="183dp" />
+
+    <TextView
+        android:id="@+id/tvEndereco"
+        android:layout_width="350"
+        android:layout_height="20"
+        android:text="Digite seu endereço"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="226dp" />
+
+    <EditText
+        android:id="@+id/etEndereco"
+        android:layout_width="350"
+        android:layout_height="43"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="250dp" />
+
+    <TextView
+        android:id="@+id/tvCargo"
+        android:layout_width="350"
+        android:layout_height="20"
+        android:text="Digite seu Cargo"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="293dp" />
+
+    <EditText
+        android:id="@+id/etCargo"
+        android:layout_width="350"
+        android:layout_height="43"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="313dp" />
+
+    <TextView
+        android:id="@+id/tvCadastrofuncionario"
+        android:layout_width="350"
+        android:layout_height="20"
+        android:text="Cadastro Funcionário"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="6dp" />
+
+    <TextView
+        android:id="@+id/tvData"
+        android:layout_width="350"
+        android:layout_height="20"
+        android:text="Data de admissâo"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="356dp" />
+
+    <EditText
+        android:id="@+id/etData"
+        android:layout_width="350"
+        android:layout_height="43"
+        android:ems="10"
+        android:inputType="date"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="380dp" />
+</android.support.constraint.ConstraintLayout>
