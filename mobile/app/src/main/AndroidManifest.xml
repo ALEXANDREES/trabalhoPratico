@@ -19,7 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".cadastrofuncionario"></activity>
+=======
+        <activity android:name=".cadastroveiculo"></activity>
+>>>>>>> b71cae276df1b211e45c4e363296ad2c0c19154d
     </application>
 
 </manifest>
