@@ -1,34 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/qualquer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Principal">
 
     <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
+        android:id="@+id/appBarLayout"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_principal" />
+    <Button
+        android:id="@+id/viFuncionario"
+        android:layout_width="172dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="308dp"
+        android:text="Vizualizar Funcionario"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="196dp" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/viCliente"
+        android:layout_width="172dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="372dp"
+        android:text="Vizualizar Cliente"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="196dp" />
+
+    <Button
+        android:id="@+id/viVeiculos"
+        android:layout_width="172dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="440dp"
+        android:text="Vizualizar Veiculos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="196dp" />
+
+    <Button
+        android:id="@+id/cadFuncionario"
+        android:layout_width="172dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="306dp"
+        android:layout_marginStart="196dp"
+        android:text="Cadastrar Funcionario"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/cadClientes"
+        android:layout_width="172dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="372dp"
+        android:layout_marginStart="196dp"
+        android:text="Cadastrar Cliente"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/cadVeiculos"
+        android:layout_width="172dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:layout_marginBottom="440dp"
+        android:layout_marginStart="196dp"
+        android:text="Cadastrar Veiculos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Locacao"
+        android:layout_width="171dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="115dp"
+        android:layout_marginStart="115dp"
+        android:text="Locação"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="231dp" />
+
 
     <Button
         android:id="@+id/button"
@@ -53,5 +114,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView" />
+</android.support.constraint.ConstraintLayout>
 
-</android.support.design.widget.CoordinatorLayout>
