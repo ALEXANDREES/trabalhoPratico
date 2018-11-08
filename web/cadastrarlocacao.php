@@ -1,118 +1,286 @@
 <!DOCTYPE html>
+<html lang="pt-br">
 
-<html lang="pt br">
+  <head>
 
-<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <meta http-equiv=Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Cadrastro Clientes</title>
+    <title>LocaPlus</title>
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  
-</head>
-<body>
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">LocaPlus</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Clientes</a></li>
-        <li><a href="badges.html">Funcionario</a></li>
-<li><a href="badges.html">Locação</a></li>
-        <li><a href="collapsible.html">Veiculos</a></li>
-      </ul>
-    </div>
-	</nav>
-  <div class="container">
-  
-	<div class="section">
-	
-		<div class="row">
-		
-      <form id="Formulario" action="action.php">
-	  
-  		<div class="col s6 offset-s3">
-			
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="dataDeLocacao" name="dataDeLocacao" type="text" class="datepicker form">
-              <label for="dataDeLocacao">Data de Locação</label>
-            </div>          
-          </div>
-          <div class="row">
-             <div class="input-field col s12">
-              <input id="dataDeDevolucao" name="dataDeDevolucao" type="text" class="datepicker form">
-              <label for="dataDeDevolucao">Data de Devolução</label>
-             </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="quilometragem" name="quilometragem" type="text" class="form validate">
-              <label for="quilometragem">Digite a quilometragem do veículo</label>
-           </div>
-          </div>
-		  
-          <div class="row">
-            <div class="col s3">
-			 <button class="btn waves-effect waves-light" type="submit" name="action">Cadastrar
-               <i class="material-icons right">send</i>
-             </button>
-			</div>
+<!-- --><!-- --><!-- --><!-- --><!-- --><!-- BOOTSTRAP CSS --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- -->
 
-			<div class="col s3">
-             <button class="btn waves-effect waves-light" type="submit" name="action">Editar
-               <i class="material-icons right">edit</i>
-             </button>
-			</div>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/estilos.css" rel="stylesheet">
 
-			<div class="col s3">
-             <button class="btn waves-effect waves-light" type="submit" name="action">Excluir
-               <i class="material-icons right">cancel</i>
-             </button>
-			</div>
+<!-- --><!-- --><!-- --><!-- --><!-- --><!-- ESTILO DO TEMPLATE --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- -->
 
-			<div class="col s3">
-             <button class="btn waves-effect waves-light" type="submit" name="action">Encerrar
-               <i class="material-icons right">cancel</i>
-             </button>
-			</div>
-          </div>
-		  
-        </div>
-      </form>
-		</div>
-	</div>
-  </div>
+    <link href="css/half-slider.css" rel="stylesheet">
 
-  <!-- Footer  -->
-          <footer class="page-footer">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Sobre a empresa</h5>
-                <p class="grey-text text-lighten-4">
-Informações ao consumidor: LocaPlus <br>
-E-mail: Locaplus.br
-</p>
+  </head>
+
+  <body>
+
+<!-- --><!-- --><!-- --><!-- --><!-- --><!-- NAVBAR DA TELA DE LOCAÇÃO --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- -->
+
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+     <div class="container">
+	      <img src='imagens/icon.png'>
+          <a class="navbar-brand" href="#">LocaPlus</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+		          <span class="navbar-toggler-icon"></span>
+            </button>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio
+                      <span class="sr-only">(current)</span></a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Veiculos</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Locação</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                  </li>
+
+                </ul>
               </div>
+     </div>
+   </nav>
+
+   <br><br><br><br><br>
+
+<!-- --><!-- --><!-- --><!-- --><!-- --><!-- TABELA RESPONSIVA DA TELA DE LOCAÇÃO --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- -->
+
+   <div class="row" id ="divTabela">
+     <div class="col"></div>
+       <div class="col">
+         <table id="tabelaLocacao" class="table table-bordered table-striped table-responsive" >
+
+         <thead>
+           <tr>
+             <th>#</th>
+             <th>Data de Locação</th>
+             <th>Data de Encerramento</th>
+             <th>Quilometragem</th>
+           </tr>
+         </thead>
+
+         <tbody>
+           <tr>
+             <th scope="row">1</th>
+             <td></td>
+             <td></td>
+             <td></td>
+           </tr>
+
+           <tr>
+             <th scope="row">2</th>
+             <td></td>
+             <td></td>
+             <td></td>
+           </tr>
+
+           <tr>
+             <th scope="row">3</th>
+             <td></td>
+             <td></td>
+             <td></td>
+           </tr>
+         </tbody>
+
+         </table>
+
+       </div>
+     <div class="col"></div>
+   </div>
+
+<!-- --><!-- --><!-- --><!-- --><!-- --><!-- BOTÕES DA TELA "PRINCIPAL" --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- -->
+
+   <div class="row">
+     <div class="col-sm-4"></div>
+       <div class="col-sm-8">
+         <button type="button" id ="modalb" class="btn btn-primary" data-toggle="modal" data-target="#modalCadastro">Cadastrar</button>
+         <button type="button" id ="modalb" class="btn btn-primary"data-toggle="modal" data-target="#modalEditar">Editar</button>
+         <button type="button" id ="modalb" class="btn btn-primary"data-toggle="modal" data-target="#modalRemover">Remover</button>
+         <button type="button" id ="modalb" class="btn btn-primary"data-toggle="modal" data-target="#modalEncerrar">Encerrar</button>
+       </div>
+   </div>
+
+<!-- --><!-- --><!-- --><!-- --><!-- --><!-- MODAL DA TELA DE CADASTRO --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- -->
+
+   <div class="modal fade" id="modalCadastro" tabindex="-1" role="dialog" aria-labelledby="tituloTelaCadastro" aria-hidden="true">
+     <div class="modal-dialog modal-dialog-centered" role="document">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h5 class="modal-title" id="tituloModalCadastro">Cadastro de Locação</h5>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+
+            <div class="modal-body">
+               <form>
+                    <div class="form-group">
+                        <label >Data de Locação</label>
+                        <input  class="form-control" id="dataLocacao"  placeholder=>
+                        <small id="dataAjuda" class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                        <label >Data de Encerramento</label>
+                        <input  class="form-control" id="dataEncerramento" >
+                    </div>
+                    <div class="form-group">
+                        <label >Quilometragem</label>
+                        <input class="form-control" id="quilometragem" >
+                    </div>
+               </form>
             </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            2018 Copyright
-            <a class="grey-text text-lighten-4 right" href="#!">Mais Informações</a>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Salvar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
             </div>
-          </div>
-        </footer>
-		
-		
-		
-  <!--  Scripts-->
-  <script src="js/materialize.min.js"></script>
-  <script src="js/materialize.js"></script>
+       </div>
+     </div>
+   </div>
+
+<!-- --><!-- --><!-- --><!-- --><!-- --><!-- MODAL DA TELA DE EDITAR LOCAÇÃO --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- -->
+
+   <div class="modal fade" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="tituloTelaEditar" aria-hidden="true">
+     <div class="modal-dialog modal-dialog-centered" role="document">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h5 class="modal-title" id="tituloModalEditar">Editar Locação</h5>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+
+            <div class="modal-body">
+               <form>
+                    <div class="form-group">
+                        <label >Data de Locação</label>
+                        <input  class="form-control" id="dataLocacao"  placeholder=>
+                        <small id="dataAjuda" class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                        <label >Data de Encerramento</label>
+                        <input  class="form-control" id="dataEncerramento" >
+                    </div>
+                    <div class="form-group">
+                        <label >Quilometragem</label>
+                        <input class="form-control" id="quilometragem" >
+                    </div>
+               </form>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Salvar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+       </div>
+     </div>
+   </div>
+
+<!-- --><!-- --><!-- --><!-- --><!-- --><!-- MODAL DA TELA DE REMOVER LOCAÇÃO --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- -->
+
+   <div class="modal fade" id="modalRemover" tabindex="-1" role="dialog" aria-labelledby="tituloTelaRemover" aria-hidden="true">
+     <div class="modal-dialog modal-dialog-centered" role="document">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h5 class="modal-title" id="tituloModalRemover">Remover Locação</h5>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+
+            <div class="modal-body">
+               <form>
+                    <div class="form-group">
+                        <label >Data de Locação</label>
+                        <input  class="form-control" id="dataLocacao"  placeholder=>
+                        <small id="dataAjuda" class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                        <label >Data de Encerramento</label>
+                        <input  class="form-control" id="dataEncerramento" >
+                    </div>
+                    <div class="form-group">
+                        <label >Quilometragem</label>
+                        <input class="form-control" id="quilometragem" >
+                    </div>
+               </form>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Excluir</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+       </div>
+     </div>
+   </div>
+
+<!-- --><!-- --><!-- --><!-- --><!-- --><!-- MODAL DA TELA DE ENCERRAR LOCAÇÃO --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- -->
+
+   <div class="modal fade" id="modalEncerrar" tabindex="-1" role="dialog" aria-labelledby="tituloTelaEncerrar" aria-hidden="true">
+     <div class="modal-dialog modal-dialog-centered" role="document">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h5 class="modal-title" id="tituloModalEncerrar">Encerrar a Locação</h5>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+
+            <div class="modal-body">
+               <form>
+                    <div class="form-group">
+                        <label >Data de Locação</label>
+                        <input  class="form-control" id="dataLocacao"  placeholder=>
+                        <small id="dataAjuda" class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                        <label >Data de Encerramento</label>
+                        <input  class="form-control" id="dataEncerramento" >
+                    </div>
+                    <div class="form-group">
+                        <label >Quilometragem</label>
+                        <input class="form-control" id="quilometragem" >
+                    </div>
+               </form>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Encerrar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+       </div>
+     </div>
+   </div>
+
+
+   <!-- Footer -->
+
+   <div class="footer">
+      <p>Copyright © LocaPlus 2018</p>
+   </div>
+
+
+   <!-- Bootstrap core JavaScript -->
+
+   <script src="vendor/jquery/jquery.min.js"></script>
+   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   </body>
+
 </html>
