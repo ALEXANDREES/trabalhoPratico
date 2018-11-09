@@ -19,7 +19,7 @@
     <EditText
         android:id="@+id/etNome"
         android:layout_width="344dp"
-        android:layout_height="35"
+        android:layout_height="35dp"
         android:layout_marginBottom="476dp"
         android:layout_marginEnd="4dp"
         android:ems="10"
@@ -40,7 +40,7 @@
     <EditText
         android:id="@+id/etPlaca"
         android:layout_width="344dp"
-        android:layout_height="35"
+        android:layout_height="35dp"
         android:layout_marginBottom="536dp"
         android:layout_marginEnd="4dp"
         android:ems="10"
@@ -61,7 +61,7 @@
     <EditText
         android:id="@+id/ptMarca"
         android:layout_width="344dp"
-        android:layout_height="35"
+        android:layout_height="35dp"
         android:layout_marginBottom="428dp"
         android:layout_marginEnd="4dp"
         android:ems="10"
@@ -82,7 +82,7 @@
     <EditText
         android:id="@+id/etModelo"
         android:layout_width="344dp"
-        android:layout_height="35"
+        android:layout_height="35dp"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -102,7 +102,7 @@
     <EditText
         android:id="@+id/etSeguro"
         android:layout_width="344dp"
-        android:layout_height="35"
+        android:layout_height="35dp"
         android:layout_marginTop="12dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -122,7 +122,7 @@
     <EditText
         android:id="@+id/editText5"
         android:layout_width="344dp"
-        android:layout_height="35"
+        android:layout_height="35dp"
         android:layout_marginTop="14dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -171,8 +171,8 @@
 
     <Button
         android:id="@+id/bSair"
-        android:layout_width="100"
-        android:layout_height="50"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="68dp"
         android:layout_marginEnd="16dp"
         android:text="Sair"
@@ -182,7 +182,7 @@
     <EditText
         android:id="@+id/etAtivo"
         android:layout_width="344dp"
-        android:layout_height="35"
+        android:layout_height="35dp"
         android:layout_marginBottom="24dp"
         android:layout_marginStart="4dp"
         android:ems="10"
