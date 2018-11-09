@@ -1,121 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Cadastro de Veículo</title>
+<html lang="pt-br">
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  
-</head>
-<body>
-<div class="row">
-    <h6> Cadastro de Veículo</h6>         
-          </div>
-  
-  <div class="container">
-	<div class="section">
-		<div class="row">
-      <form id="Formulario" action="action.php">
-  			<div class="col s6 offset-s3">
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="placa" name="placav" type="text" class="form validate">
-              <label for="nome">Placa Veículo</label>
-            </div>          
-          </div>
-		    <div class="row">
-            <div class="input-field col s12">
-              <input id="nome" name="nome" type="text" class="form validate">
-              <label for="nome">Nome Veículo</label>
-            </div>          
-          </div>
-		    <div class="row">
-            <div class="input-field col s12">
-              <input id="marca" name="marca" type="text" class="form validate">
-              <label for="nome">Marca Veículo</label>
-            </div>          
-          </div>
-		  <div class="row">
-            <div class="input-field col s12">
-              <input id="modelo" name="modelo" type="text" class="form validate">
-              <label for="nome"> Modelo Veículo</label>
-            </div>          
-          </div>
-		   
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="valors" name="valors" type="text" class="form validate">
-              <label for="nome"> Valor do Seguro</label>
-            </div>          
-          </div>
-		    <div class="row">
-            <div class="input-field col s12">
-              <input id="valorl" name="valorl" type="text" class="form validate">
-              <label for="nome"> Valor da Locação</label>
-            </div>          
-          </div>
-		    <div class="row">
-            <div class="input-field col s12">
-              <input id="cor" name="cor" type="text" class="form validate">
-              <label for="nome"> Cor do Veículo</label>
-            </div>          
-          </div>
-        
-            <div class="row">
-             <div class="input-field col s12">
-                <select id="ativo" name="ativo" class="form">              
-                  <option value="1" selected>Sim</option>
-                  <option value="2">Não</option>
-                 
-                </select>
-                <label>Ativo</label>
-              </div>
-          </div>
-        
-        
-        
-        
-              <div class="row">
-            <div class="col s3">
-			 <button class="btn waves-effect waves-light" type="submit" name="action">Cadastrar
-               
-             </button>
-			</div>
+  <head>
 
-			<div class="col s3">
-             <button class="btn waves-effect waves-light" type="submit" name="action">Editar
-             
-             </button>
-			</div>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-			<div class="col s3">
-            <button class="btn waves-effect waves-light" type="submit" name="action">Excluir
-              
-            </button>
-			</div>
+    <title>LocaPlus</title>
 
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/estilos.css" rel="stylesheet">
 
-			
-          </div>
+    <!-- Custom styles for this template -->
+    <link href="css/half-slider.css" rel="stylesheet">
 
-         
-		  
-		
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+	  <img src='imagens/icon.png'>
+        <a class="navbar-brand" href="#">LocaPlus</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Inicio
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Veiculos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Locação</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login</a>
+            </li>
+          </ul>
         </div>
-      </form>
-		</div>
-	</div>
-  </div>
+      </div>
+    </nav>
 
-  <!--  Scripts-->
-  <script src="js/jquery-3.3.1.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
+
+
+
+   
+   
+  
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+<div class="row" id ="divta">
+    <div class="col"></div>
+ <div class="col"> <table id="tabelav" class="table table-bordered table-striped table-responsive" >
+
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Placa</th>
+      <th>Nome</th>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Valor Seguro</th>
+      <th>Valor Locação</th>
+      <th>Cor</th>
+      <th>Ativo</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+   
+    </tr>
+    
+    
+  </tbody>
+
+</table>
+</div>
+    
+  <div class="col">   
+              
+
+    </div>
+    
+</div>
+    
+    <div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-8"><button type="button" id ="modalb" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    
+  Cadastrar
+</button>
+     <button type="button"  id ="modalb" class="btn btn-primary">Remover</button> 
+     <button type="button"  id ="modalb" class="btn btn-primary">Editar</button>
+</div>
+  
+</div>
+    
+  <div class="footer">
+  <p>Footer</p>
+</div>
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Cadastro Veiculo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+                        <form>
+                    <div class="form-group">
+                        <label >Placa</label>
+                        <input  class="form-control" id="exampleInputEmail1"  placeholder=>
+                        <small id="emailHelp" class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                        <label >Nome</label>
+                        <input  class="form-control" id="exampleInputPassword1" >
+                    </div>
+                    <div class="form-group">
+                        <label >Marca</label>
+                        <input class="form-control" id="exampleInputPassword1" >
+                    </div>
+                    <div class="form-group">
+                        <label >Modelo</label>
+                        <input class="form-control" id="exampleInputPassword1" >
+                    </div>
+                    <div class="form-group">
+                        <label >Valor Seguro</label>
+                        <input class="form-control" id="exampleInputPassword1" >
+                    </div>
+                     <div class="form-group">
+                        <label >Valor Locaçao</label>
+                        <input class="form-control" id="exampleInputPassword1" >
+                    </div>
+                       <div class="form-group">
+                        <label >Cor</label>
+                        <input class="form-control" id="exampleInputPassword1" >
+                    </div>
+                      <div class="form-group">
+                        <label for="exampleFormControlSelect1">Ativo</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Sim</option>
+                            <option>Não</option>
+
+                        </select>
+                    </div>
+
+                </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Sair</button>
+        <button type="button" class="btn btn-primary">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   </body>
+
 </html>
