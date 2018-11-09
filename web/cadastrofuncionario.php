@@ -69,14 +69,13 @@
   <thead>
     <tr>
       <th>#</th>
-      <th>Placa</th>
       <th>Nome</th>
-      <th>Marca</th>
-      <th>Modelo</th>
-      <th>Valor Seguro</th>
-      <th>Valor Locação</th>
-      <th>Cor</th>
-      <th>Ativo</th>
+      <th>Cpf</th>
+      <th>Rg</th>
+      <th>Endereço</th>
+      <th>Cargo</th>
+      <th>Data de Admissão</th>
+      
     </tr>
   </thead>
 
@@ -109,12 +108,12 @@
     
     <div class="row">
   <div class="col-sm-4"></div>
-  <div class="col-sm-8"><button type="button" id ="modalb" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  <div class="col-sm-8"><button type="button" id ="modalb" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">
     
   Cadastrar
 </button>
-     <button type="button"  id ="modalb" class="btn btn-primary">Remover</button> 
-     <button type="button"  id ="modalb" class="btn btn-primary">Editar</button>
+     <button type="button"  id ="modalb" class="btn btn-secondary">Remover</button> 
+     <button type="button"  id ="modalb" class="btn btn-secondary">Editar</button>
 </div>
   
 </div>
@@ -134,43 +133,30 @@
       <div class="modal-body">
                         <form>
                     <div class="form-group">
-                        <label >Placa</label>
+                        <label >Nome</label>
                         <input  class="form-control" id="exampleInputEmail1"  placeholder=>
                         <small id="emailHelp" class="form-text text-muted"></small>
                     </div>
                     <div class="form-group">
-                        <label >Nome</label>
+                        <label >Cpf</label>
                         <input  class="form-control" id="exampleInputPassword1" >
                     </div>
                     <div class="form-group">
-                        <label >Marca</label>
+                        <label >Rg</label>
                         <input class="form-control" id="exampleInputPassword1" >
                     </div>
                     <div class="form-group">
-                        <label >Modelo</label>
+                        <label >Endereço</label>
                         <input class="form-control" id="exampleInputPassword1" >
                     </div>
                     <div class="form-group">
-                        <label >Valor Seguro</label>
+                        <label >Cargo</label>
                         <input class="form-control" id="exampleInputPassword1" >
                     </div>
                      <div class="form-group">
-                        <label >Valor Locaçao</label>
+                        <label >Data de admissão</label>
                         <input class="form-control" id="exampleInputPassword1" >
                     </div>
-                       <div class="form-group">
-                        <label >Cor</label>
-                        <input class="form-control" id="exampleInputPassword1" >
-                    </div>
-                      <div class="form-group">
-                        <label for="exampleFormControlSelect1">Ativo</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>Sim</option>
-                            <option>Não</option>
-
-                        </select>
-                    </div>
-
                 </form>
       </div>
       <div class="modal-footer">
