@@ -1,9 +1,11 @@
-package com.example.eduardoi.locaplus;
+package com.example.eduardoi.locaplus.TelasCadastros;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class cadastroveiculo extends AppCompatActivity {
+import com.example.eduardoi.locaplus.R;
+
+public class CadastroVeiculo extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

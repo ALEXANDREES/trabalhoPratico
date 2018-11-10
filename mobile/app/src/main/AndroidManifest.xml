@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Principal"
+            android:name=".TelasListas.ListarLocacao"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -19,12 +19,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".cadastrocliente"></activity>
-
-        <activity android:name=".cadastrofuncionario"></activity>
-
-        <activity android:name=".cadastroveiculo"></activity>
+        <activity android:name=".TelasCadastros.CadastroLocacao" />
+        <!--
+        <activity android:name=".Telas.CadastroFuncionario" />
+        <activity android:name=".Telas.CadastroVeiculo" />
+        <activity android:name=".Telas.CadastroCliente" />
+        <activity android:name=".Telas.Principal" />
+        -->
     </application>
 
 </manifest>
