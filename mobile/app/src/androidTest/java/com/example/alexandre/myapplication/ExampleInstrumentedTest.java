@@ -1,4 +1,4 @@
-package com.example.eduardoi.locaplus;
+package com.example.alexandre.myapplication;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.eduardoi.locaplus", appContext.getPackageName());
+        assertEquals("com.example.alexandre.myapplication", appContext.getPackageName());
     }
 }

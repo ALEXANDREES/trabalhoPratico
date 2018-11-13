@@ -1,9 +1,9 @@
-package com.example.eduardoi.locaplus.TelasCadastros;
+package com.example.alexandre.myapplication.TelasCadastros;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.eduardoi.locaplus.R;
+import com.example.alexandre.myapplication.R;
 
 public class CadastroCliente extends AppCompatActivity {
 

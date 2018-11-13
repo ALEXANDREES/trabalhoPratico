@@ -1,4 +1,4 @@
-package com.example.eduardoi.locaplus;
+package com.example.alexandre.myapplication;
 
 import org.junit.Test;
 
