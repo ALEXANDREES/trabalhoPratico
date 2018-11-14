@@ -41,7 +41,7 @@
         android:inputType="textPersonName"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDataEncerramento"
+        app:layout_constraintTop_toBottomOf="@+id/tvSeguro"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -70,7 +70,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/tvDataEncerramento"
+        android:id="@+id/tvSeguro"
         android:layout_width="348dp"
         android:layout_height="31dp"
         android:layout_marginStart="16dp"

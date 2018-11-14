@@ -16,47 +16,47 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Data Locação"
+        android:text="Nome"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/tvMarca"
+        android:id="@+id/tvRG"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Cliente"
+        android:text="RG"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/tvModelo"
+        android:id="@+id/tvCPF"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Veiculo"
+        android:text="CPF"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/tvSeguro"
+        android:id="@+id/tvEndereco"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Data Encerramento"
+        android:text="Endereço"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/tvKm"
+        android:id="@+id/tvCNH"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="KM"
+        android:text="CNH"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/tvStatus"
+        android:id="@+id/tvN_Dependentes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Status"
+        android:text="Numero de Dependetes"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </LinearLayout>
