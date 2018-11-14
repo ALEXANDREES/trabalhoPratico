@@ -30,7 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/tvDataLocacao"
+        android:id="@+id/tvNome"
         android:layout_width="350dp"
         android:layout_height="35dp"
         android:layout_marginStart="16dp"
@@ -61,7 +61,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDataLocacao" />
+        app:layout_constraintTop_toBottomOf="@+id/tvNome" />
 
     <EditText
         android:id="@+id/etCliente"
@@ -73,10 +73,10 @@
         android:inputType="textPersonName"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvCliente" />
+        app:layout_constraintTop_toBottomOf="@+id/tvMarca" />
 
     <TextView
-        android:id="@+id/tvCarro"
+        android:id="@+id/tvModelo"
         android:layout_width="350dp"
         android:layout_height="35dp"
         android:layout_marginStart="16dp"
@@ -85,6 +85,17 @@
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etCliente" />
+
+    <TextView
+        android:id="@+id/tvMarca"
+        android:layout_width="348dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:text="Cliente"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDataLocacao" />
 
     <EditText
         android:id="@+id/etVeiculo"
@@ -96,18 +107,7 @@
         android:inputType="textPersonName"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvCarro" />
-
-    <TextView
-        android:id="@+id/tvCliente"
-        android:layout_width="348dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
-        android:text="Cliente"
-        android:visibility="visible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etDataLocacao" />
+        app:layout_constraintTop_toBottomOf="@+id/tvModelo" />
 
     <EditText
         android:id="@+id/etStatus"

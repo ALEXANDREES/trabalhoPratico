@@ -5,58 +5,70 @@
 
     <TextView
         android:id="@+id/tvId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
+        android:text="Id" />
+
+    <TextView
+        android:id="@+id/tvPlaca"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
         android:layout_marginTop="10dp"
-        android:text="1"
+        android:text="Placa"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
         android:id="@+id/tvNome"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
         android:layout_marginTop="10dp"
-        android:text="Data Locação"
+        android:text="Nome"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
         android:id="@+id/tvMarca"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
         android:layout_marginTop="10dp"
-        android:text="Cliente"
+        android:text="Marca"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
         android:id="@+id/tvModelo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
         android:layout_marginTop="10dp"
-        android:text="Veiculo"
+        android:text="Modelo"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
         android:id="@+id/tvSeguro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
         android:layout_marginTop="10dp"
-        android:text="Data Encerramento"
+        android:text="Valor Seguro"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/tvKm"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/tvLocacao"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
         android:layout_marginTop="10dp"
-        android:text="KM"
+        android:text="Valor Locação"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/tvStatus"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/tvAtivo"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
         android:layout_marginTop="10dp"
-        android:text="Status"
+        android:text="Ativo"
         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvCor"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
+        android:text="Cor" />
 
 </LinearLayout>
