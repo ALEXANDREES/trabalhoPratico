@@ -26,8 +26,8 @@ public class CadastrarLocacao extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                EditText etDataInicial = findViewById(R.id.etDataLocacao);
-                EditText etCliente = findViewById(R.id.etCliente);
+                EditText etDataInicial = findViewById(R.id.etNome);
+                EditText etCliente = findViewById(R.id.etRg);
                 EditText etVeiculo = findViewById(R.id.etVeiculo);
                 EditText etStatus = findViewById(R.id.etStatus);
                 etStatus.setText("ATIVA");

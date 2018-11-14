@@ -14,11 +14,12 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
-import com.example.alexandre.myapplication.TelasEditarRemover.EditarRemoverLocacao;
+import com.example.alexandre.myapplication.TelasCadastros.CadastroFuncionario;
+import com.example.alexandre.myapplication.TelasEditarRemover.EditarRemoverFuncionario;
 import com.example.alexandre.myapplication.R;
-import com.example.alexandre.myapplication.TelasCadastros.CadastrarLocacao;
 
-public class ListarLocacao extends AppCompatActivity {
+
+public class ListarFuncionario extends AppCompatActivity {
 
     private SQLiteDatabase db;
     private SimpleCursorAdapter adt = null;
@@ -27,15 +28,15 @@ public class ListarLocacao extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_listarlocacao);
+        setContentView(R.layout.activity_listarfuncionario);
 
         //Criar o banco de dados
         db = openOrCreateDatabase("TESTE3", SQLiteDatabase.CREATE_IF_NECESSARY, null);
 
-        String locacoes = "CREATE TABLE IF NOT EXISTS LOCACAO (_id INTEGER PRIMARY KEY autoincrement, " +
-                "DATALOCACAO VARCHAR(10), CLIENTE VARCHAR(50), VEICULO VARCHAR(30), DATAENCERRAMENTO VARCHAR(10), KM FLOAT, STATUS VARCHAR(10))";
+        String funcionarios = "CREATE TABLE IF NOT EXISTS FUNCIONARIO (_id INTEGER PRIMARY KEY autoincrement, " +
+                "NOME VARCHAR(50), CPF VARCHAR(11), RG VARCHAR(10), ENDERECO VARCHAR(50), CARGO VARCHAR(20), DATA VARCHAR(30))";
 
-        db.execSQL(locacoes);
+        db.execSQL(funcionarios);
 
 
 
@@ -43,7 +44,7 @@ public class ListarLocacao extends AppCompatActivity {
         btAtualizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getBaseContext(), CadastrarLocacao.class));
+                startActivity(new Intent(getBaseContext(), CadastroFuncionario.class));
             }
         });
 
@@ -53,11 +54,11 @@ public class ListarLocacao extends AppCompatActivity {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 //Prencher o ListView
                 String[] busca = new String[]{"%" + txtBusca.getText().toString() + "%"};
-                Cursor cursor = db.query("LOCACAO", new String[]{"_id", "DATALOCACAO", "CLIENTE", "VEICULO", "DATAENCERRAMENTO", "KM", "STATUS"}, "CLIENTE LIKE ?", busca, null, null, "_id ASC", null);
+                Cursor cursor = db.query("FUNCIONARIO", new String[]{"_id", "NOME", "RG", "CPF", "ENDERECO", "CARGO", "DATA"}, "NOME LIKE ?", busca, null, null, "_id ASC", null);
                 adt.changeCursor(cursor);
 
 
-                ListView listaDados = (ListView) findViewById(R.id.listarLocacoes);
+                ListView listaDados = (ListView) findViewById(R.id.listarFuncionario);
                 listaDados.setAdapter(adt);
                 return false;
             }
@@ -68,11 +69,11 @@ public class ListarLocacao extends AppCompatActivity {
     public void onResume(){
         super.onResume();
         //Prencher o ListView
-        Cursor cursor = db.query("LOCACAO", new String[]{"_id", "DATALOCACAO", "CLIENTE", "VEICULO", "DATAENCERRAMENTO", "KM", "STATUS"}, null, null, null, null, "_id ASC", null);
-        String[] campos = {"_id", "DATALOCACAO", "CLIENTE", "VEICULO", "DATAENCERRAMENTO", "KM", "STATUS"};
-        int[] ids = {R.id.tvId, R.id.tvNome, R.id.tvRg, R.id.tvCpf, R.id.tvDataEncerramento, R.id.tvKm,R.id.tvStatus};
-        adt = new SimpleCursorAdapter(getBaseContext(), R.layout.modelo_locacao, cursor, campos, ids, 0);
-        ListView listaDados = (ListView) findViewById(R.id.listarLocacoes);
+        Cursor cursor = db.query("FUNCIONARIO", new String[]{"_id", "NOME", "RG", "CPF", "ENDERECO", "CARGO", "DATA"}, null, null, null, null, "_id ASC", null);
+        String[] campos = {"_id", "NOME", "RG", "CPF", "ENDERECO", "CARGO", "DATA"};
+        int[] ids = {R.id.tvId, R.id.tvNome, R.id.tvRg, R.id.tvCpf, R.id.tvEndereco, R.id.tvCargo,R.id.tvData};
+        adt = new SimpleCursorAdapter(getBaseContext(), R.layout.modelo_funcionario, cursor, campos, ids, 0);
+        ListView listaDados = (ListView) findViewById(R.id.listarFuncionario);
         listaDados.setAdapter(adt);
 
 
@@ -80,15 +81,14 @@ public class ListarLocacao extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Cursor retornoCursor = (Cursor) adt.getItem(position);
-                Intent it = new Intent(getBaseContext(), EditarRemoverLocacao.class);
+                Intent it = new Intent(getBaseContext(), EditarRemoverFuncionario.class);
                 it.putExtra("Codigo", retornoCursor.getInt(0));
-                it.putExtra("Data Locação", retornoCursor.getString(1));
-                it.putExtra("Cliente", retornoCursor.getString(2));
-                it.putExtra("Veiculo", retornoCursor.getString(3));
-                it.putExtra("Data Encerramento", retornoCursor.getString(4));
-                it.putExtra("Quilometros", retornoCursor.getFloat(5));
-                it.putExtra("Status", retornoCursor.getString(6));
-                // it.putExtra("email", retornoCursor.getString(retornoCursor.getColumnIndex("Quilometros")));
+                it.putExtra("Nome", retornoCursor.getString(1));
+                it.putExtra("Rg", retornoCursor.getString(2));
+                it.putExtra("Cpf", retornoCursor.getString(3));
+                it.putExtra("Endereco", retornoCursor.getString(4));
+                it.putExtra("Cargo", retornoCursor.getFloat(5));
+                it.putExtra("Data", retornoCursor.getString(6));
                 startActivity(it);
 
             }

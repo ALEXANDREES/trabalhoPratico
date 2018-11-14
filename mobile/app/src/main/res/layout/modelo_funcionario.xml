@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Data Locação"
+        android:text="Nome"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Cliente"
+        android:text="Rg"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
@@ -32,31 +32,31 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Veiculo"
+        android:text="Cpf"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/tvDataEncerramento"
+        android:id="@+id/tvEndereco"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Data Encerramento"
+        android:text="Endereco"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/tvKm"
+        android:id="@+id/tvCargo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="KM"
+        android:text="Cargo"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/tvStatus"
+        android:id="@+id/tvDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Status"
+        android:text="Data de Admissao"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </LinearLayout>

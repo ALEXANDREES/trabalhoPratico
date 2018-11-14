@@ -27,8 +27,8 @@ public class EditarRemoverLocacao extends AppCompatActivity{
 
         final Intent it = getIntent();
 
-        final EditText editDataLocacao = (EditText) findViewById(R.id.etDataLocacao);
-        final EditText editCliente = (EditText) findViewById(R.id.etCliente);
+        final EditText editDataLocacao = (EditText) findViewById(R.id.etNome);
+        final EditText editCliente = (EditText) findViewById(R.id.etRg);
         final EditText editVeiculo = (EditText) findViewById(R.id.etVeiculo);
         final EditText editStatus = (EditText) findViewById(R.id.etStatus);
 

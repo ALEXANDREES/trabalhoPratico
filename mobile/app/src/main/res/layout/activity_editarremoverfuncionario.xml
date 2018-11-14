@@ -4,29 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TelasEditarRemover.EditarRemoverLocacao">
-
-    <Button
-        android:id="@+id/btEncerrarLoca"
-        android:layout_width="99dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginStart="2dp"
-        android:text="Encerrar"
-        android:textColor="@android:color/holo_red_dark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btAtualizar" />
+    tools:context=".TelasEditarRemover.EditarRemoverFuncionario">
 
     <Button
         android:id="@+id/btExcluir"
         android:layout_width="83dp"
         android:layout_height="50dp"
         android:layout_marginBottom="16dp"
-        android:layout_marginStart="2dp"
+        android:layout_marginStart="103dp"
         android:text="Excluir"
         android:textColor="@android:color/holo_red_dark"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btEncerrarLoca" />
+        app:layout_constraintEnd_toStartOf="@+id/btSair"
+        app:layout_constraintStart_toEndOf="@+id/btAtualizar" />
 
     <Button
         android:id="@+id/btAtualizar"
@@ -45,7 +35,6 @@
         android:layout_height="50dp"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginStart="2dp"
         android:onClick="acaoSair"
         android:text="Sair"
         android:textColor="@android:color/holo_red_dark"
@@ -58,9 +47,9 @@
         android:layout_width="350dp"
         android:layout_height="35dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Data de Locação"
+        android:text="Nome"
         android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/etNome"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
 
@@ -71,7 +60,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif"
-        android:text="                 Editar/Remover Locação"
+        android:text="                 Editar/Remover Funcionario"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,10 +71,10 @@
         android:layout_width="350dp"
         android:layout_height="43dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/tvRg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvNome" />
 
@@ -94,10 +83,10 @@
         android:layout_width="350dp"
         android:layout_height="43dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/tvCpf"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvRg" />
 
@@ -106,21 +95,21 @@
         android:layout_width="350dp"
         android:layout_height="35dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
-        android:text="Veiculo"
+        android:text="Cpf"
         android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/etCpf"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etRg" />
 
     <EditText
-        android:id="@+id/etVeiculo"
+        android:id="@+id/etCpf"
         android:layout_width="350dp"
         android:layout_height="43dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/tvEndereco"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvCpf" />
 
@@ -129,20 +118,51 @@
         android:layout_width="348dp"
         android:layout_height="31dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
-        android:text="Cliente"
+        android:text="Rg"
         android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/etRg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNome" />
 
+    <TextView
+        android:id="@+id/tvEndereco"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:text="Endereco"
+        app:layout_constraintBottom_toTopOf="@+id/etEndereco"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCpf" />
+
     <EditText
-        android:id="@+id/etStatus"
-        android:layout_width="wrap_content"
-        android:layout_height="22dp"
+        android:id="@+id/etEndereco"
+        android:layout_width="350dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:visibility="invisible"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="437dp" />
+        app:layout_constraintBottom_toTopOf="@+id/tvCargo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEndereco" />
+
+    <TextView
+        android:id="@+id/tvCargo"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:text="Cargo"
+        app:layout_constraintBottom_toTopOf="@+id/etCargo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEndereco" />
+
+    <EditText
+        android:id="@+id/etCargo"
+        android:layout_width="350dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCargo" />
 
 </android.support.constraint.ConstraintLayout>

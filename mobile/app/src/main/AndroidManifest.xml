@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.alexandre.myapplication.TelasListas.ListarLocacao">
+        <activity android:name=".TelasListas.ListarFuncionario">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,12 +17,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".TelasCadastros.CadastrarLocacao" />
-        <activity android:name=".TelasEditarRemover.EditarRemoverLocacao"></activity>
-        <activity android:name=".TelasEditarRemover.EncerrarLocacao"></activity>
-        <activity android:name=".TelasCadastros.CadastroCliente"></activity>
-        <activity android:name=".TelasCadastros.CadastroFuncionario"></activity>
-        <activity android:name=".TelasCadastros.CadastroVeiculo"></activity>
-
+        <activity android:name=".TelasEditarRemover.EditarRemoverLocacao" />
+        <activity android:name=".TelasEditarRemover.EncerrarLocacao" />
+        <activity android:name=".TelasCadastros.CadastroCliente" />
+        <activity android:name=".TelasCadastros.CadastroFuncionario" />
+        <activity android:name=".TelasCadastros.CadastroVeiculo" />
+        <activity android:name=".TelasListas.ListarLocacao"></activity>
+        <activity android:name=".TelasEditarRemover.EditarRemoverFuncionario" />
     </application>
 
 </manifest>
