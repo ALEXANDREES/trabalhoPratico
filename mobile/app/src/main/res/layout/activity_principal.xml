@@ -7,115 +7,70 @@
     android:layout_height="match_parent"
     tools:context=".TelasCadastros.Principal">
 
-    <android.support.design.widget.CoordinatorLayout
-        android:id="@+id/appBarLayout"
-        android:layout_width="wrap_content"
+
+    <Button
+        android:id="@+id/btFuncionario"
+        android:layout_width="289dp"
         android:layout_height="wrap_content"
-        android:theme="@style/Animation.AppCompat.Tooltip">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/Animation.AppCompat.Tooltip" />
-
-    </android.support.design.widget.CoordinatorLayout>
+        android:layout_marginEnd="47dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="28dp"
+        android:text="Funcionário"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btCliente" />
 
     <Button
-        android:id="@+id/viFuncionario"
-        android:layout_width="172dp"
-        android:layout_height="52dp"
-        android:layout_marginBottom="308dp"
-        android:text="Vizualizar Funcionario"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="196dp"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/viCliente"
-        android:layout_width="172dp"
-        android:layout_height="52dp"
-        android:layout_marginBottom="372dp"
-        android:text="Vizualizar Cliente"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="196dp"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/viVeiculos"
-        android:layout_width="172dp"
-        android:layout_height="55dp"
-        android:layout_marginBottom="440dp"
-        android:text="Vizualizar Veiculos"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="196dp"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/cadFuncionario"
-        android:layout_width="172dp"
-        android:layout_height="55dp"
-        android:layout_marginBottom="306dp"
-        android:layout_marginStart="196dp"
-        android:text="Cadastrar Funcionario"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/cadClientes"
-        android:layout_width="172dp"
-        android:layout_height="52dp"
-        android:layout_marginBottom="372dp"
-        android:layout_marginStart="196dp"
-        android:text="Cadastrar Cliente"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/cadVeiculos"
-        android:layout_width="172dp"
+        android:id="@+id/btCliente"
+        android:layout_width="289dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="440dp"
-        android:layout_marginStart="196dp"
-        android:text="Cadastrar Veiculos"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginEnd="47dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="28dp"
+        android:text="Cliente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btLocacao" />
 
     <Button
-        android:id="@+id/Locacao"
-        android:layout_width="171dp"
+        android:id="@+id/btRevisao"
+        android:layout_width="289dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="115dp"
-        android:layout_marginStart="115dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="28dp"
+        android:text="Revisão"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btVeiculo" />
+
+    <Button
+        android:id="@+id/btVeiculo"
+        android:layout_width="289dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="47dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="28dp"
+        android:text="Veiculo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btFuncionario" />
+
+    <Button
+        android:id="@+id/btLocacao"
+        android:layout_width="289dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="47dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
         android:text="Locação"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="231dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="22dp"
-        android:layout_height="wrap_content"
-        android:text="Button" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
 </android.support.constraint.ConstraintLayout>
 

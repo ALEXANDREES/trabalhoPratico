@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.alexandre.myapplication.TelasListas.ListarLocacao">
+        <activity android:name="com.example.alexandre.myapplication.TelasCadastros.Principal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,6 +22,7 @@
         <activity android:name=".TelasCadastros.CadastroCliente"></activity>
         <activity android:name=".TelasCadastros.CadastroFuncionario"></activity>
         <activity android:name=".TelasCadastros.CadastroVeiculo"></activity>
+        <activity android:name=".TelasListas.ListarLocacao"></activity>
 
     </application>
 

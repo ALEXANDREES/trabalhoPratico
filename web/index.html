@@ -36,14 +36,13 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Veiculos</a>
+              <a class="nav-link" href="#carros">Veiculos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Locação</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Login</a>
-            </li>
+              <a class="nav-link" href="login.html">Login</a>
+					
+					
+			</li>
           </ul>
         </div>
       </div>
@@ -98,12 +97,12 @@
       <div class="row">
         <div class="col-sm-8">
 		
-          <h2 class="mt-4">VAMOS VIAJAR DE CARRO?<img src='imagens/index/iconav.png'></h2>
-          <p>TEMOS CARROS INCRIVEIS PARA CURTIR​​​</p>
-          <p></p>
-          <p>
-            <a class="btn btn-primary btn-lg" href="#">CONFIRA &raquo;</a>
-          </p>
+        <h2 class="mt-4">VAMOS VIAJAR DE CARRO?<img src='imagens/index/iconav.png'></h2>
+        <p>TEMOS CARROS INCRIVEIS PARA CURTIR​​​</p>
+			<p> 
+				<a class="btn btn-primary btn-lg" href="#carros">CONFIRA &raquo;</a> 
+			</p>
+
         </div>
         <div class="col-sm-4">
           <h2 class="mt-4">Entre em contato</h2>
@@ -124,45 +123,161 @@
       </div>
       <!-- /.row -->
 
-      <div class="row">
-        <div class="col-sm-4 my-4">
-          <div class="card">
-            <img class="card-img-top" src="imagens/index/carro1.jpg" alt="">
-            <div class="card-body">
-              <h4 class="card-title">POLO</h4>
-              <p class="card-text">TEXTO</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Alugar</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 my-4">
-          <div class="card">
-            <img class="card-img-top" src="imagens/index/carro2.jpg">
-            <div class="card-body">
-              <h4 class="card-title">CIVIC 2018</h4>
-              <p class="card-text">TEXTO</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Alugar</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 my-4">
-          <div class="card">
-            <img class="card-img-top" src="imagens/index/carro3.jpg">
-            <div class="card-body">
-              <h4 class="card-title">Q8</h4>
-              <p class="card-text">TEXTO</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Alugar</a>
-            </div>
-          </div>
-        </div>
+		<a name='carros'>
+			<div class="row">
+				<div class="col-sm-4 my-4">
+				  <div class="card">
+					<img class="card-img-top" src="imagens/index/carro1.jpg" alt="">
+					<div class="card-body">
+					  <h4 class="card-title">POLO</h4>
+					  <p class="card-text">TEXTO</p>
+					</div>
+					  <a href="#" class="btn btn-primary" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Alugar</a>
+							<!-- MODAL ALUGAR POLO -->
+							<div class="modal" id="myModal">
+							  <div class="modal-dialog">
+								<div class="modal-content">
 
-      </div>
+								  <!-- Modal Header -->
+								  <div class="modal-header">
+									<h4 class="modal-title">ALUGAR</h4>
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+								  </div>
+
+								  <!-- Modal body -->
+								  <div class="modal-body">
+										<p>Para estar alugando esse carro entre em contato com um representante</p>
+											<address>
+											<strong>LocaPlus</strong>
+											<br>Dourados - MS
+											<br>Rua___, Nº
+											<br>
+										    </address>
+										    <address>
+											<abbr>Telefone:</abbr>
+											(67) 9 9999-9999
+											<br>
+											<abbr title="Email"></abbr>
+											<a href="mailto:#">loca@locaplus.com.br</a>
+										    </address>
+								  </div>
+
+								  <!-- Modal footer -->
+								  <div class="modal-footer">
+									<button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+								  </div>
+
+								</div>
+							  </div>
+							</div>
+				  </div>
+				</div>
+				
+				
+				
+				<div class="col-sm-4 my-4">
+				  <div class="card">
+					<img class="card-img-top" src="imagens/index/carro2.jpg">
+					<div class="card-body">
+					  <h4 class="card-title">CIVIC 2018</h4>
+					  <p class="card-text">TEXTO</p>
+					</div>
+					  <a href="#" class="btn btn-primary" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Alugar</a>				  
+						  <!-- MODAL ALUGAR CIVIC 2018 -->
+								<div class="modal" id="myModal">
+								  <div class="modal-dialog">
+									<div class="modal-content">
+
+									  <!-- Modal Header -->
+									  <div class="modal-header">
+										<h4 class="modal-title">ALUGAR</h4>
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+									  </div>
+
+									  <!-- Modal body -->
+									  <div class="modal-body">
+											<p>Para estar alugando esse carro entre em contato com um representante</p>
+												<address>
+												<strong>LocaPlus</strong>
+												<br>Dourados - MS
+												<br>Rua___, Nº
+												<br>
+												</address>
+												<address>
+												<abbr>Telefone:</abbr>
+												(67) 9 9999-9999
+												<br>
+												<abbr title="Email"></abbr>
+												<a href="mailto:#">loca@locaplus.com.br</a>
+												</address>
+									  </div>
+
+									  <!-- Modal footer -->
+									  <div class="modal-footer">
+										<button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+									  </div>
+
+									</div>
+								  </div>
+								</div>
+				  </div>
+				</div>
+				
+				
+				
+				<div class="col-sm-4 my-4">
+				  <div class="card">
+					<img class="card-img-top" src="imagens/index/carro3.jpg">
+					<div class="card-body">
+					  <h4 class="card-title">Q8</h4>
+					  <p class="card-text">TEXTO</p>
+					</div>
+					<a href="#" class="btn btn-primary" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Alugar</a>				  
+						  <!-- MODAL ALUGAR CIVIC 2018 -->
+								<div class="modal" id="myModal">
+								  <div class="modal-dialog">
+									<div class="modal-content">
+
+									  <!-- Modal Header -->
+									  <div class="modal-header">
+										<h4 class="modal-title">ALUGAR</h4>
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+									  </div>
+
+									  <!-- Modal body -->
+									  <div class="modal-body">
+											<p>Para estar alugando esse carro entre em contato com um representante</p>
+												<address>
+												<strong>LocaPlus</strong>
+												<br>Dourados - MS
+												<br>Rua___, Nº
+												<br>
+												</address>
+												<address>
+												<abbr>Telefone:</abbr>
+												(67) 9 9999-9999
+												<br>
+												<abbr title="Email"></abbr>
+												<a href="mailto:#">loca@locaplus.com.br</a>
+												</address>
+									  </div>
+
+									  <!-- Modal footer -->
+									  <div class="modal-footer">
+										<button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+									  </div>
+
+									</div>
+								  </div>
+								</div>
+					<div class="card-footer">
+					  
+					  
+					</div>
+				  </div>
+				</div>
+			</div>
+		</a>
       <!-- /.row -->
     </header>
 
