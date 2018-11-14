@@ -70,7 +70,7 @@ public class ListarLocacao extends AppCompatActivity {
         //Prencher o ListView
         Cursor cursor = db.query("LOCACAO", new String[]{"_id", "DATALOCACAO", "CLIENTE", "VEICULO", "DATAENCERRAMENTO", "KM", "STATUS"}, null, null, null, null, "_id ASC", null);
         String[] campos = {"_id", "DATALOCACAO", "CLIENTE", "VEICULO", "DATAENCERRAMENTO", "KM", "STATUS"};
-        int[] ids = {R.id.tvId, R.id.tvDataLocacao, R.id.tvCliente, R.id.tvCarro, R.id.tvDataEncerramento, R.id.tvKm,R.id.tvStatus};
+        int[] ids = {R.id.tvId, R.id.tvNome, R.id.tvMarca, R.id.tvModelo, R.id.tvSeguro, R.id.tvKm,R.id.tvStatus};
         adt = new SimpleCursorAdapter(getBaseContext(), R.layout.modelo_locacao, cursor, campos, ids, 0);
         ListView listaDados = (ListView) findViewById(R.id.listarLocacoes);
         listaDados.setAdapter(adt);
