@@ -25,25 +25,31 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
 	  <img src='imagens/icon.png'>
-        <a class="navbar-brand" href="#">LocaPlus</a>
+        <a class="navbar-brand" href="index.html">LocaPlus</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 		  <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Inicio
+              <a class="nav-link" href="principal.php">Inicio
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Veiculos</a>
+              <a class="nav-link" href="cadastroveiculo.php">Veiculos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Locação</a>
+              <a class="nav-link" href="cadastrarlocacao.php">Locação</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Login</a>
+              <a class="nav-link" href="cadastrocliente.php">Cliente</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="cadastrofuncionario.php">Funcionario</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="melhoria.php">Melhoria</a>
             </li>
           </ul>
         </div>
