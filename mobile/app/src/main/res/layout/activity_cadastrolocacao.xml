@@ -4,7 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TelasCadastros.CadastrarLocacao">
+    tools:context=".TelasCadastros.CadastroLocacao">
+
+    <Button
+        android:id="@+id/btEscolheVeiculo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="17dp"
+        android:layout_marginTop="16dp"
+        android:onClick="acaoEscolherVeiculo"
+        android:text="Selecione"
+        android:textColor="@android:color/holo_green_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvModelo" />
 
     <Button
         android:id="@+id/btCadastrar"
@@ -12,6 +24,7 @@
         android:layout_height="50dp"
         android:layout_marginBottom="16dp"
         android:layout_marginStart="16dp"
+        android:onClick="acaoSalvar"
         android:text="Salvar"
         android:textColor="@android:color/holo_green_dark"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -65,13 +78,15 @@
 
     <EditText
         android:id="@+id/etCliente"
-        android:layout_width="350dp"
+        android:layout_width="240dp"
         android:layout_height="43dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/btEscolheCliente"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvMarca" />
 
@@ -99,13 +114,15 @@
 
     <EditText
         android:id="@+id/etVeiculo"
-        android:layout_width="350dp"
+        android:layout_width="244dp"
         android:layout_height="43dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/btEscolheVeiculo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvModelo" />
 
@@ -117,6 +134,19 @@
         android:inputType="textPersonName"
         android:visibility="invisible"
         tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="443dp" />
+        tools:layout_editor_absoluteY="443dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btEscolheCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="17dp"
+        android:layout_marginTop="16dp"
+        android:onClick="acaoEscolherCliente"
+        android:text="Selecione"
+        android:textColor="@android:color/holo_green_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMarca" />
 
 </android.support.constraint.ConstraintLayout>
