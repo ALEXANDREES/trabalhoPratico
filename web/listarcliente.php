@@ -15,9 +15,9 @@ include "conexao.php";
 	
 	<title> Lista de Clientes </title>
 	
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/estilos.css">	
-	
+	 <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/estilos.css" rel="stylesheet">
+    <link href="css/half-slider.css" rel="stylesheet">	
 	<script src="js/metodos.js"></script>
 	
 </head>
@@ -116,7 +116,7 @@ include "conexao.php";
 								    echo"<td>";			
 							
 										echo "<a data-toggle='modal' data-target='#editarcliente' data-id='" .$clientes[0] ."' data-nome='" .$clientes[1] ."' data-rg='" .$clientes[2] ."' data-cpf='" .$clientes[3] ."' data-endereco='" .$clientes[4] ."' data-cnh='" .$clientes[5]."'data-ndependentes='" .$clientes[6] ."' class='btn btn-warning'>Editar</a> ";				
-									    echo "<a data-toggle='modal' data-target='#removercliente' data-id='".$clientes[0]."'class='btn btn-danger'>Remover</a>";
+									    echo "<a class='btn btn-danger' href='removercliente.php?id=" .$clientes[0] ."'>Remover</a>";
 							
 								    echo "</td>";
 							
@@ -208,44 +208,6 @@ include "conexao.php";
             </div>
 			
         </div> 
-
-		<div class="modal fade" id="removercliente" tabindex="-1" role="dialog" aria-labelledby="removercliente" aria-hidden="true">
-					
-			<div class="modal-dialog modal-dialog-centered" role="document">
-						
-				<div class="modal-content">
-						
-					<div class="modal-header">
-							
-						<h5 class="modal-title" id="removercliente">Excluindo Clientes</h5>
-								
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">						
-									
-							<span aria-hidden="true">&times;</span>
-									
-						</button>
-								
-					</div>
-							
-					<div class="modal-body">
-							
-						O usuario selecionado sera deletado, tem certeza que deseja excluir?
-								
-					</div>
-							
-					<div class="modal-footer">
-							
-					
-						<?php echo "<a class='btn btn-danger' href='removercliente.php?id='" . $clientes[0] . "'>Remover</a>" ?>
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-								
-					</div>
-				
-				</div>
-				
-			</div>
-			
-		</div>
 		
         <div class="modal" id="editarcliente" tabindex="-1" role="dialog" aria-labellebdy="myModalLabel" aria-hidden="true">
 		
@@ -328,7 +290,9 @@ include "conexao.php";
 	</div>
 	
 	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>	
+	<script src="js/bootstrap.min.js"></script>		
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 	
 	<script>			 
 	
