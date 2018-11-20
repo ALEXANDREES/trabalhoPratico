@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TelasListas.listarveiculos">
+    tools:context=".TelasListas.ListarMelhoria">
 
     <TextView
         android:id="@+id/tvFuncionario"
@@ -12,7 +12,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
-        android:text="Lista de Veiculos"
+        android:text="Lista Melhorias"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,7 +29,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvFuncionario" />
 
     <ListView
-        android:id="@+id/listarVeiculos"
+        android:id="@+id/listarMelhoria"
         android:layout_width="376dp"
         android:layout_height="319dp"
         android:layout_marginStart="4dp"
@@ -42,6 +42,7 @@
         android:layout_width="120dp"
         android:layout_height="50dp"
         android:layout_marginBottom="37dp"
+        android:onClick="bt"
         android:text="Cadastrar"
         android:textColor="@android:color/holo_green_dark"
         app:layout_constraintBottom_toBottomOf="parent"

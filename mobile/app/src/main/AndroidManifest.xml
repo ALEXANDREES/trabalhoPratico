@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.eduardoi.locaplus">
+    package="com.example.alexandre.myapplication">
 
     <application
         android:allowBackup="true"
@@ -9,26 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TelasCadastros.Principal">
+        <activity android:name="com.example.alexandre.myapplication.TelasCadastros.Principal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TelasCadastros.CadastroLocacao" />
-        <activity android:name=".TelasCadastros.CadastroCliente" />
-        <activity android:name=".TelasCadastros.CadastroVeiculo" />
-        <activity android:name=".TelasCadastros.CadastroFuncionario" />
-        <activity android:name=".TelasCadastros.EditarRemoverLocacao" />
-        <activity android:name=".TelasListas.ListarLocacao" />
-        <activity android:name=".TelasListas.ListarClientes" />
-        <activity android:name=".TelasListas.ListarClientesLocacao" />
-        <activity android:name=".TelasListas.ListarClientesLocacaoEditar" />
-        <activity android:name=".TelasListas.ListarVeiculos" />
-        <activity android:name=".TelasListas.ListarVeiculosLocacao" />
-        <activity android:name=".TelasListas.ListarVeiculosLocacaoEditar" />
-        <activity android:name=".TelasCadastros.EncerrarLocacao" />
+        <activity android:name=".TelasCadastros.CadastrarLocacao" />
+        <activity android:name=".TelasEditarRemover.EditarRemoverLocacao"></activity>
+        <activity android:name=".TelasEditarRemover.EncerrarLocacao"></activity>
+        <activity android:name=".TelasCadastros.CadastroCliente"></activity>
+        <activity android:name=".TelasCadastros.CadastroFuncionario"></activity>
+        <activity android:name=".TelasCadastros.CadastroVeiculo"></activity>
+        <activity android:name=".TelasListas.ListarLocacao"></activity>
+
     </application>
 
 </manifest>

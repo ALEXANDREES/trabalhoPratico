@@ -4,19 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TelasCadastros.CadastroLocacao">
-
-    <Button
-        android:id="@+id/btEscolheVeiculo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="17dp"
-        android:layout_marginTop="16dp"
-        android:onClick="acaoEscolherVeiculo"
-        android:text="Selecione"
-        android:textColor="@android:color/holo_green_dark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvModelo" />
+    tools:context=".TelasCadastros.CadastrarLocacao">
 
     <Button
         android:id="@+id/btCadastrar"
@@ -24,7 +12,6 @@
         android:layout_height="50dp"
         android:layout_marginBottom="16dp"
         android:layout_marginStart="16dp"
-        android:onClick="acaoSalvar"
         android:text="Salvar"
         android:textColor="@android:color/holo_green_dark"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -43,7 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/tvNome"
+        android:id="@+id/tvFuncionario"
         android:layout_width="350dp"
         android:layout_height="35dp"
         android:layout_marginStart="16dp"
@@ -74,24 +61,22 @@
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNome" />
+        app:layout_constraintTop_toBottomOf="@+id/tvFuncionario" />
 
     <EditText
         android:id="@+id/etCliente"
-        android:layout_width="240dp"
+        android:layout_width="350dp"
         android:layout_height="43dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:visibility="visible"
-        app:layout_constraintEnd_toStartOf="@+id/btEscolheCliente"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvMarca" />
+        app:layout_constraintTop_toBottomOf="@+id/tvMelhoria" />
 
     <TextView
-        android:id="@+id/tvModelo"
+        android:id="@+id/tvDepartamento"
         android:layout_width="350dp"
         android:layout_height="35dp"
         android:layout_marginStart="16dp"
@@ -102,7 +87,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etCliente" />
 
     <TextView
-        android:id="@+id/tvMarca"
+        android:id="@+id/tvMelhoria"
         android:layout_width="348dp"
         android:layout_height="31dp"
         android:layout_marginStart="16dp"
@@ -114,17 +99,15 @@
 
     <EditText
         android:id="@+id/etVeiculo"
-        android:layout_width="244dp"
+        android:layout_width="350dp"
         android:layout_height="43dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:visibility="visible"
-        app:layout_constraintEnd_toStartOf="@+id/btEscolheVeiculo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvModelo" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDepartamento" />
 
     <EditText
         android:id="@+id/etStatus"
@@ -134,19 +117,6 @@
         android:inputType="textPersonName"
         android:visibility="invisible"
         tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="443dp"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/btEscolheCliente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="17dp"
-        android:layout_marginTop="16dp"
-        android:onClick="acaoEscolherCliente"
-        android:text="Selecione"
-        android:textColor="@android:color/holo_green_dark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvMarca" />
+        tools:layout_editor_absoluteY="443dp" />
 
 </android.support.constraint.ConstraintLayout>
