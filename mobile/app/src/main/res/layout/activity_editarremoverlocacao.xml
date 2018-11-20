@@ -4,7 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TelasEditarRemover.EditarRemoverLocacao">
+    tools:context=".TelasCadastros.EditarRemoverLocacao">
+
+    <Button
+        android:id="@+id/btSelecioneVeiculoEditar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="acaoEscolherVeiculo"
+        android:text="Selecionar"
+        android:textColor="@android:color/holo_green_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etVeiculo"
+        app:layout_constraintTop_toBottomOf="@+id/tvModelo" />
 
     <Button
         android:id="@+id/btEncerrarLoca"
@@ -12,6 +26,7 @@
         android:layout_height="50dp"
         android:layout_marginBottom="16dp"
         android:layout_marginStart="2dp"
+        android:onClick="acaoEncerrarLocacao"
         android:text="Encerrar"
         android:textColor="@android:color/holo_red_dark"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -54,7 +69,7 @@
         app:layout_constraintStart_toEndOf="@+id/btExcluir" />
 
     <TextView
-        android:id="@+id/tvFuncionario"
+        android:id="@+id/tvNome"
         android:layout_width="350dp"
         android:layout_height="35dp"
         android:layout_marginStart="16dp"
@@ -87,11 +102,11 @@
         android:inputType="textPersonName"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvFuncionario" />
+        app:layout_constraintTop_toBottomOf="@+id/tvNome" />
 
     <EditText
         android:id="@+id/etCliente"
-        android:layout_width="350dp"
+        android:layout_width="251dp"
         android:layout_height="43dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
@@ -99,10 +114,10 @@
         android:inputType="textPersonName"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvMelhoria" />
+        app:layout_constraintTop_toBottomOf="@+id/tvMarca" />
 
     <TextView
-        android:id="@+id/tvDepartamento"
+        android:id="@+id/tvModelo"
         android:layout_width="350dp"
         android:layout_height="35dp"
         android:layout_marginStart="16dp"
@@ -114,7 +129,7 @@
 
     <EditText
         android:id="@+id/etVeiculo"
-        android:layout_width="350dp"
+        android:layout_width="251dp"
         android:layout_height="43dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
@@ -122,10 +137,10 @@
         android:inputType="textPersonName"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDepartamento" />
+        app:layout_constraintTop_toBottomOf="@+id/tvModelo" />
 
     <TextView
-        android:id="@+id/tvMelhoria"
+        android:id="@+id/tvMarca"
         android:layout_width="348dp"
         android:layout_height="31dp"
         android:layout_marginStart="16dp"
@@ -144,5 +159,19 @@
         android:visibility="invisible"
         tools:layout_editor_absoluteX="85dp"
         tools:layout_editor_absoluteY="437dp" />
+
+    <Button
+        android:id="@+id/btSelecioneClienteEditar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="acaoEscolherCliente"
+        android:text="Selecionar"
+        android:textColor="@android:color/holo_green_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etCliente"
+        app:layout_constraintTop_toBottomOf="@+id/tvMarca" />
 
 </android.support.constraint.ConstraintLayout>

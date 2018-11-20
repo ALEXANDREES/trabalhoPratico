@@ -10,6 +10,8 @@
         android:id="@+id/btSalvar"
         android:layout_width="100dp"
         android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:onClick="acaoSalvar"
         android:text="Salvar"
         android:textColor="@android:color/holo_green_dark"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,6 +22,7 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginEnd="16dp"
+        android:onClick="acaoSair"
         android:text="Sair"
         android:textColor="@android:color/holo_red_dark"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -45,7 +48,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvFuncionario"
+        android:id="@+id/tvNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nome"
@@ -60,7 +63,7 @@
         android:inputType="textPersonName"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvFuncionario" />
+        app:layout_constraintTop_toBottomOf="@+id/tvNome" />
 
     <EditText
         android:id="@+id/etMarca"
@@ -70,10 +73,10 @@
         android:inputType="textPersonName"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvMelhoria" />
+        app:layout_constraintTop_toBottomOf="@+id/tvMarca" />
 
     <TextView
-        android:id="@+id/tvMelhoria"
+        android:id="@+id/tvMarca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Marca"
@@ -81,7 +84,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etNome" />
 
     <TextView
-        android:id="@+id/tvDepartamento"
+        android:id="@+id/tvModelo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="7dp"
@@ -97,7 +100,7 @@
         android:inputType="textPersonName"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDepartamento" />
+        app:layout_constraintTop_toBottomOf="@+id/tvModelo" />
 
     <EditText
         android:id="@+id/etSeguro"
