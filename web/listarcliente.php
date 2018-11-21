@@ -128,8 +128,10 @@ include "conexao.php";
 				
 	        </table>
 			
-		</div> 
-
+		</div> 	
+		
+		<br><br>
+		
 		<a class="btn btn-success" data-toggle="modal" data-target="#novocliente">Cadastrar</a>
 
 		<div class="modal" id="novocliente" tabindex="-1" role="dialog" aria-labellebdy="myModalLabel" aria-hidden="true">
@@ -288,6 +290,12 @@ include "conexao.php";
         </div> 
 
 	</div>
+	
+	<div class="footer">
+	
+      <p>Copyright © LocaPlus 2018</p>
+	  
+    </div>
 	
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>		
