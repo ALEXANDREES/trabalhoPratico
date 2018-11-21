@@ -83,7 +83,7 @@ include "conexao.php";
 					echo "<td>$melhoria[0]</td><td>$melhoria[1]</td><td>$melhoria[2]</td><td>$melhoria[3]</td>";	
 					echo"<td>";						
 				    echo "<a data-toggle='modal' data-target='#editarMelhoria' data-id='" .$melhoria[0] ."' data-funcionario='" .$melhoria[1] ."' data-melhoria='" .$melhoria[2] ."' data-departamento='" .$melhoria[3] ."' class='btn btn-warning'>Editar</a> ";			
-					echo "<a class='btn btn-danger' href='removerLocacao.php?id=" .$locacoes[0] ."'>Remover</a>";		
+					echo "<a class='btn btn-danger' href='removerMelhoria.php?id=" .$melhoria[0] ."'>Remover</a>";
 					echo "</td>";
 					echo "</tr>";
 				}
@@ -104,11 +104,25 @@ include "conexao.php";
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>                                          
                     </div>
                     <div class="modal-body">
-                       <form action="cadastrarmelhoria.php" method="POST">              		
+                       <form action="cadastrarmelhoria.php" method="POST">    
+					   
                        		<div class="form-group">
-                       			<label for="funcionario">Funcionario</label>
-                       			<input class="form-control" id="funcionario" name="funcionario" type="text" placeholder="Funcionario"></input>
-                       		</div>
+					    		  <label for="funcionario" class="form-group"> Funcionario </label>
+								    <select id="funcionario" class="form-control" name="funcionario" required>
+									<option value= "0"> Selecione o Funcionario </option>
+									<?php
+									$selecionar = "SELECT * FROM funcionario";
+								   	$selfuncionario = mysqli_query($conexao, $selecionar);
+									while($elemento = mysqli_fetch_assoc($selfuncionario)){
+
+										$nome = $elemento['nome'];
+										echo "<option value= '$nome' > $nome</option>";
+									}	
+								
+							    	?>	
+									</select>
+							</div>
+							
 							<div class="form-group">
                        			<label for="melhoria">Melhoria</label>
                        			<input class="form-control" id="melhoria" name="melhoria" type="text" placeholder="Informe a melhoria"></input>
