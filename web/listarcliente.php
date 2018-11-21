@@ -74,10 +74,12 @@ include "conexao.php";
 			
 	</nav>
 
+	<br></br><br></br><br></br>
+	
 	<div class="container">
 	
 		<div class="row">	
-
+			
 			<table class='table'>
 			
 				<tr>
@@ -129,8 +131,6 @@ include "conexao.php";
 	        </table>
 			
 		</div> 	
-		
-		<br></br><br></br><br></br>
 		
 		<a class="btn btn-success" data-toggle="modal" data-target="#novocliente">Cadastrar</a>
 
