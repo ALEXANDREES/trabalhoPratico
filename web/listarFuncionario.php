@@ -49,6 +49,8 @@ include "conexao.php";
      </div>
    </nav>
 
+   <br> <br>
+   
 	<div class="container">
 		<div class="row">	
 	
@@ -64,7 +66,7 @@ include "conexao.php";
 				while ($funcionario = $resultado->fetch_row()) 
 				{					
 					echo "<tr>";
-					echo "<td>$[0]</td><td>$funcionario[1]</td><td>$funcionario[2]</td><td>$funcionario[3]</td><td>$funcionario[4]</td><td>$funcionario[5]</td><td>$funcionario[6]</td>";	
+					echo "<td>$funcionario[0]</td><td>$funcionario[1]</td><td>$funcionario[2]</td><td>$funcionario[3]</td><td>$funcionario[4]</td><td>$funcionario[5]</td><td>$funcionario[6]</td>";	
 					echo"<td>";						
 				    echo "<a data-toggle='modal' data-target='#editarFuncionario' data-id='" .$funcionario[0] ."' data-nome='" .$funcionario[1] ."' data-cpf='" .$funcionario[2] ."' data-rg='" .$funcionario[3] ."' data-endereco='" .$funcionario[4] ."' data-cargo='" .$funcionario[5] ."' data-data='" .$funcionario[6] ."' class='btn btn-warning'>Editar</a> ";			
 					echo "<a class='btn btn-danger' href='removerFuncionario.php?id=" .$funcionario[0] ."'>Remover</a>";		
@@ -84,11 +86,11 @@ include "conexao.php";
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-					    <h4>Nova Locação</h4> 
+					    <h4>Novo Funcionario</h4> 
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>                                          
                     </div>
                     <div class="modal-body">
-                       <form action="cadastrarLocacao.php" method="POST">              		
+                       <form action="cadastrofuncionario.php" method="POST">              		
                        		<div class="form-group">
                        			<label for="nome">Nome:</label>
                        			<input class="form-control" id="nome" name="nome" type="text" placeholder="Nome"></input>
