@@ -1,3 +1,8 @@
+<?php
+
+include "conexao.php";
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -58,7 +63,8 @@
 
 
 <!-- conexao, tabela -->
-
+<br>
+<br>
    	<div class="container">
 		<div class="row">	
 	
