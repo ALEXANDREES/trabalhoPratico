@@ -90,8 +90,8 @@ public class CadastroVeiculo extends AppCompatActivity {
             novoVeiculo.setNome(etNome.getText().toString());
             novoVeiculo.setMarca(etMarca.getText().toString());
             novoVeiculo.setModelo(etModelo.getText().toString());
-            novoVeiculo.setValorSeguro(Float.parseFloat(etValorSeguro.getText().toString()));
-            novoVeiculo.setValorLocacao(Float.parseFloat(etValorLocacao.getText().toString()));
+            novoVeiculo.setValorSeguro(etValorSeguro.getText().toString());
+            novoVeiculo.setValorLocacao(etValorLocacao.getText().toString());
             novoVeiculo.setAtivo(etAtivo.getText().toString());
             novoVeiculo.setCor(etCor.getText().toString());
             inserir();

@@ -19,6 +19,7 @@ import com.example.eduardoi.locaplus.Entidades.VeiculoEntidade;
 import com.example.eduardoi.locaplus.R;
 import com.example.eduardoi.locaplus.TelasCadastros.CadastroVeiculo;
 import com.example.eduardoi.locaplus.TelasCadastros.EditarRemoverLocacao;
+import com.example.eduardoi.locaplus.TelasCadastros.EditarRemoverVeiculo;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -42,9 +43,19 @@ public class ListarVeiculos extends AppCompatActivity {
         listaVeiculos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                Intent it = new Intent(ListarVeiculos.this, EditarRemoverLocacao.class);
+                Intent it = new Intent(ListarVeiculos.this, EditarRemoverVeiculo.class);
                 VeiculoEntidade novoVeiculo = (VeiculoEntidade) adapterView.getItemAtPosition(position);
-                it.putExtra("novoveiculo", novoVeiculo);
+                it.putExtra("id", novoVeiculo.getId());
+                it.putExtra("placa", novoVeiculo.getPlaca());
+                it.putExtra("nome", novoVeiculo.getNome());
+                it.putExtra("marca", novoVeiculo.getMarca());
+                it.putExtra("modelo", novoVeiculo.getModelo());
+                it.putExtra("seguro", novoVeiculo.getValorSeguro());
+                it.putExtra("locacao", novoVeiculo.getValorLocacao());
+                it.putExtra("ativo", novoVeiculo.getAtivo());
+                it.putExtra("cor", novoVeiculo.getCor());
+
+
                 startActivity(it);
             }
         });
@@ -76,8 +87,8 @@ public class ListarVeiculos extends AppCompatActivity {
                 veiculo.setNome(res.getString(res.getColumnIndexOrThrow("NOME")));
                 veiculo.setMarca(res.getString(res.getColumnIndexOrThrow("MARCA")));
                 veiculo.setModelo(res.getString(res.getColumnIndexOrThrow("MODELO")));
-                veiculo.setValorSeguro(res.getFloat(res.getColumnIndexOrThrow("VALORSEGURO")));
-                veiculo.setValorLocacao(res.getFloat(res.getColumnIndexOrThrow("VALORLOCACAO")));
+                veiculo.setValorSeguro(res.getString(res.getColumnIndexOrThrow("VALORSEGURO")));
+                veiculo.setValorLocacao(res.getString(res.getColumnIndexOrThrow("VALORLOCACAO")));
                 veiculo.setAtivo(res.getString(res.getColumnIndexOrThrow("ATIVO")));
                 veiculo.setCor(res.getString(res.getColumnIndexOrThrow("COR")));
                 veiculos.add(veiculo);

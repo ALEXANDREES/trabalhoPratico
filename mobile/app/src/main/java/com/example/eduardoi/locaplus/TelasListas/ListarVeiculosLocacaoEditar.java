@@ -76,8 +76,8 @@ public class ListarVeiculosLocacaoEditar extends AppCompatActivity {
                 veiculo.setNome(res.getString(res.getColumnIndexOrThrow("NOME")));
                 veiculo.setMarca(res.getString(res.getColumnIndexOrThrow("MARCA")));
                 veiculo.setModelo(res.getString(res.getColumnIndexOrThrow("MODELO")));
-                veiculo.setValorSeguro(res.getFloat(res.getColumnIndexOrThrow("VALORSEGURO")));
-                veiculo.setValorLocacao(res.getFloat(res.getColumnIndexOrThrow("VALORLOCACAO")));
+                veiculo.setValorSeguro(res.getString(res.getColumnIndexOrThrow("VALORSEGURO")));
+                veiculo.setValorLocacao(res.getString(res.getColumnIndexOrThrow("VALORLOCACAO")));
                 veiculo.setAtivo(res.getString(res.getColumnIndexOrThrow("ATIVO")));
                 veiculo.setCor(res.getString(res.getColumnIndexOrThrow("COR")));
                 veiculos.add(veiculo);

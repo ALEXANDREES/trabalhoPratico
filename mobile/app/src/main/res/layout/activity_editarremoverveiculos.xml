@@ -7,10 +7,10 @@
     tools:context=".TelasCadastros.CadastroVeiculo">
 
     <Button
-        android:id="@+id/btSalvar"
+        android:id="@+id/btAtualizar"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:onClick="acaoSalvar"
+        android:layout_marginStart="4dp"
         android:text="Salvar"
         android:textColor="@android:color/holo_green_dark"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -162,6 +162,7 @@
         android:id="@+id/tvCor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
         android:text="Cor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etAtivo" />
@@ -173,7 +174,16 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/btSalvar"
+        app:layout_constraintBottom_toTopOf="@+id/btAtualizar"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btExcluir"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="24dp"
+        android:text="Excluir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btSair" />
 
 </android.support.constraint.ConstraintLayout>

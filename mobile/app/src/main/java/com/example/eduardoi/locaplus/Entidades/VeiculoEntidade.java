@@ -8,8 +8,8 @@ public class VeiculoEntidade implements Serializable{
     private String nome;
     private String marca;
     private String modelo;
-    private Float valorSeguro;
-    private Float valorLocacao;
+    private String valorSeguro;
+    private String valorLocacao;
     private String ativo;
     private String cor;
 
@@ -53,19 +53,19 @@ public class VeiculoEntidade implements Serializable{
         this.modelo = modelo;
     }
 
-    public Float getValorSeguro() {
+    public String getValorSeguro() {
         return valorSeguro;
     }
 
-    public void setValorSeguro(Float valorSeguro) {
+    public void setValorSeguro(String valorSeguro) {
         this.valorSeguro = valorSeguro;
     }
 
-    public Float getValorLocacao() {
+    public String getValorLocacao() {
         return valorLocacao;
     }
 
-    public void setValorLocacao(Float valorLocacao) {
+    public void setValorLocacao(String valorLocacao) {
         this.valorLocacao = valorLocacao;
     }
 
