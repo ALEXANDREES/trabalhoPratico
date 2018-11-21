@@ -130,7 +130,7 @@ include "conexao.php";
 			
 		</div> 	
 		
-		<br><br>
+		<br></br><br></br><br></br>
 		
 		<a class="btn btn-success" data-toggle="modal" data-target="#novocliente">Cadastrar</a>
 
@@ -142,9 +142,8 @@ include "conexao.php";
 				
                     <div class="modal-header">
 					
+						<h4>Novo Cliente</h4> 
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						
-                        <h4>Novo Cliente</h4> 
 						
                     </div>
 					
