@@ -47,27 +47,39 @@ include "conexao.php";
 				<ul class="navbar-nav ml-auto">
 
 					<li class="nav-item active">
-							
-						<a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
-							
-					</li>
+						
+						<a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+						
+                    </li>
 
 					<li class="nav-item">
-						
-						<a class="nav-link" href="#">Veiculos</a>
-						
-					</li>
-
-					<li class="nav-item">
-				  
-						<a class="nav-link" href="#">Locação</a>
 					
-					</li>
-
-					<li class="nav-item">
+						<a class="nav-link" href="listarVeiculo.php">Veiculos</a>
 						
-						<a class="nav-link" href="#">Login</a>
-							
+                    </li>
+				  
+					<li class="nav-item">
+					
+						<a class="nav-link" href="listarLocacao.php">Locação</a>
+						
+					</li>
+				  
+					<li class="nav-item">
+					
+						<a class="nav-link" href="listarCliente.php">Cliente</a>
+						
+					</li>
+			
+					<li class="nav-item">
+					
+						<a class="nav-link" href="listarFuncionario.php">Funcionario</a>
+						
+					</li>
+			
+					<li class="nav-item">
+					
+						<a class="nav-link" href="listarMelhoria.php">Melhoria</a>
+						
 					</li>
 
 				</ul>
