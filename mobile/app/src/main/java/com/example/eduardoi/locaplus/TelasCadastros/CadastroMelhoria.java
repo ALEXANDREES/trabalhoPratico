@@ -1,4 +1,4 @@
-/*package com.example.eduardoi.locaplus.TelasCadastros;
+    package com.example.eduardoi.locaplus.TelasCadastros;
 
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
@@ -29,7 +29,7 @@ public class CadastroMelhoria extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cadastromelhoria);
+        setContentView(R.layout.cadastromelhoria);
 
 
         etFuncionario = findViewById(R.id.etFuncionario);
@@ -57,7 +57,7 @@ public class CadastroMelhoria extends AppCompatActivity {
         }
     }
 
-    public void acaoSalvar(View view){
+    public void salvarMelhoria(View view){
 
         if(novaMelhoria == null)
             novaMelhoria = new MelhoriaEntidade();
@@ -72,4 +72,4 @@ public class CadastroMelhoria extends AppCompatActivity {
     public void acaoSair(View view){
         finish();
     }
-}*/
+}

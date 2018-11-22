@@ -1,4 +1,4 @@
-/*package com.example.eduardoi.locaplus.TelasCadastros;
+package com.example.eduardoi.locaplus.TelasCadastros;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
@@ -27,7 +27,7 @@ public class EditarRemoverMelhoria extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_editarremovermelhoria);
+        setContentView(R.layout.editarremovermelhoria);
 
         conexaoBD();
         final Intent it = getIntent();
@@ -42,8 +42,8 @@ public class EditarRemoverMelhoria extends AppCompatActivity {
 
 
 
-        Button btAtulizar = (Button) findViewById(R.id.btAtualizar);
-        btAtulizar.setOnClickListener(new View.OnClickListener() {
+        Button btAtualizar = (Button) findViewById(R.id.btSalvarMelho);
+        btAtualizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 conexao = bd.getWritableDatabase();
@@ -53,7 +53,7 @@ public class EditarRemoverMelhoria extends AppCompatActivity {
                 values.put("MELHORIA", editMelhoria.getText().toString());
                 values.put("DEPARTAMENTO", editDepartamento.getText().toString());
 
-                if (conexao.update("MELHORIA", values, "ID = ?", new String[]{String.valueOf(it.getIntExtra("id",0))}) > 0) {
+                if (conexao.update("MELHORIA", values, "ID = ?", new String[]{String.valueOf(it.getIntExtra("ID",0))}) > 0) {
                     conexao.close();
                     Toast.makeText(getBaseContext(), "Melhoria atualizada", Toast.LENGTH_SHORT).show();
                     finish();
@@ -62,12 +62,12 @@ public class EditarRemoverMelhoria extends AppCompatActivity {
             }
         });
 
-        Button btExcluir = (Button) findViewById(R.id.btExcluir);
+        Button btExcluir = (Button) findViewById(R.id.btRemoverMelhoria);
         btExcluir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 conexao = bd.getWritableDatabase();
-                if (conexao.delete("MELHORIA", "ID = ?", new String[]{String.valueOf(it.getIntExtra("id", 0))}) > 0){
+                if (conexao.delete("MELHORIA", "ID = ?", new String[]{String.valueOf(it.getIntExtra("ID", 0))}) > 0){
                     Toast.makeText(getBaseContext(), "Melhoria excluida!", Toast.LENGTH_SHORT).show();
                     finish();
                 } else
@@ -100,4 +100,3 @@ public class EditarRemoverMelhoria extends AppCompatActivity {
         finish();
     }
 }
-*/

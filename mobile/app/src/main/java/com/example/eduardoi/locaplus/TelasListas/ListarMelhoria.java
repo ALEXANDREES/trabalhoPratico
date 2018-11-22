@@ -1,4 +1,4 @@
-/*package com.example.eduardoi.locaplus.TelasListas;
+package com.example.eduardoi.locaplus.TelasListas;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -34,10 +34,10 @@ public class ListarMelhoria extends AppCompatActivity {
         setContentView(R.layout.activity_listarmelhoria);
         listaMelhoria = findViewById(R.id.listarMelhoria);
         conexaoBD();
-        acoes();
+        acMelhoria();
     }
 
-    private void acoes() {
+    private void acMelhoria() {
         listaMelhoria.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
@@ -83,7 +83,7 @@ public class ListarMelhoria extends AppCompatActivity {
         return melhorias;
     }
 
-    public void acaoCadastrar(View view){
+    public void cadMelhoria(View view){
         Intent it = new Intent(ListarMelhoria.this, CadastroMelhoria.class);
         startActivity(it);
     }
@@ -101,4 +101,3 @@ public class ListarMelhoria extends AppCompatActivity {
         listaMelhoria.setAdapter(arrayAdapter);
     }
 }
-*/

@@ -9,6 +9,7 @@ import com.example.eduardoi.locaplus.R;
 import com.example.eduardoi.locaplus.TelasListas.ListarClientes;
 import com.example.eduardoi.locaplus.TelasListas.ListarFuncionario;
 import com.example.eduardoi.locaplus.TelasListas.ListarLocacao;
+import com.example.eduardoi.locaplus.TelasListas.ListarMelhoria;
 import com.example.eduardoi.locaplus.TelasListas.ListarVeiculos;
 
 
@@ -40,9 +41,9 @@ public class Principal extends AppCompatActivity {
         startActivity(it);
     }
 
-    //public void acaoMelhoria(View view){
-    //    Intent it = new Intent(Principal.this, ListarMelhoria.class);
-     //   startActivity(it);
-    //}
+    public void acaoMelhoria(View view){
+        Intent it = new Intent(Principal.this, ListarMelhoria.class);
+        startActivity(it);
+    }
 
 }
