@@ -142,7 +142,7 @@ include "conexao.php";
 							            //Botões de ações sobre a tabela cliente
 										
 										echo "<a data-toggle='modal' data-target='#editarcliente' data-id='" .$clientes[0] ."' data-nome='" .$clientes[1] ."' data-rg='" .$clientes[2] ."' data-cpf='" .$clientes[3] ."' data-endereco='" .$clientes[4] ."' data-cnh='" .$clientes[5]."'data-ndependentes='" .$clientes[6] ."' class='btn btn-warning'>Editar</a> ";				
-									    echo "<a data-toggle='modal' class='btn btn-danger' href='removercliente.php?id=" .$clientes[0] ."'>Remover</a>";
+									    echo "<a class='btn btn-danger' href='removercliente.php?id=" .$clientes[0] ."'>Remover</a>";
 							
 								    echo "</td>";
 							
