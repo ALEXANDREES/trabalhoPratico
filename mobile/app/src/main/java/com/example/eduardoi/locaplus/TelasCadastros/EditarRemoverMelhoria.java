@@ -27,7 +27,7 @@ public class EditarRemoverMelhoria extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.editarremovermelhoria);
+        setContentView(R.layout.activity_editarremovermelhoria);
 
         conexaoBD();
         final Intent it = getIntent();
@@ -42,7 +42,7 @@ public class EditarRemoverMelhoria extends AppCompatActivity {
 
 
 
-        Button btAtualizar = (Button) findViewById(R.id.btSalvarMelho);
+        Button btAtualizar = (Button) findViewById(R.id.btAtualizarMelho);
         btAtualizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -5,16 +5,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TelasCadastros.CadastroMelhoria">
+    tools:context=".TelasCadastros.EditarRemoverMelhoria">
 
     <Button
-        android:id="@+id/btSalvarMelho"
+        android:id="@+id/btAtualizarMelho"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:layout_marginStart="16dp"
-        android:onClick="salvarMelhoria"
-        android:text="@string/salvar"
+        android:text="Atualizar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -25,7 +24,7 @@
         android:layout_marginBottom="17dp"
         android:layout_marginEnd="17dp"
         android:onClick="acaoSair"
-        android:text="@string/sair"
+        android:text="Sair"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -73,7 +72,8 @@
         android:layout_marginTop="18dp"
         android:text="Departamento"
         app:layout_constraintTop_toBottomOf="@+id/etMelhoria"
-        tools:layout_editor_absoluteX="16dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/etDepartamento"
@@ -95,6 +95,20 @@
         android:layout_marginTop="20dp"
         android:text="Melhoria"
         app:layout_constraintTop_toBottomOf="@+id/etFuncionario"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp" />
+
+    <Button
+        android:id="@+id/btRemoverMelhoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginStart="80dp"
+        android:text="Excluir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btSair"
+        app:layout_constraintStart_toEndOf="@+id/btAtualizarMelho"
+        tools:ignore="MissingConstraints" />
 
 </android.support.constraint.ConstraintLayout>

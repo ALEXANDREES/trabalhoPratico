@@ -29,7 +29,7 @@ public class CadastroMelhoria extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.cadastromelhoria);
+        setContentView(R.layout.activity_cadastromelhoria);
 
 
         etFuncionario = findViewById(R.id.etFuncionario);
