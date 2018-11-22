@@ -16,6 +16,8 @@ import android.widget.Toast;
 import com.example.eduardoi.locaplus.Dados.Banco;
 import com.example.eduardoi.locaplus.R;
 
+
+//ENCERRAR LOCAÇÃO NÃO ESTA FUNCIONANDO POIS NÃO PEGA O ID CORRETO.
 public class EncerrarLocacao extends AppCompatActivity{
 
     Banco bd;

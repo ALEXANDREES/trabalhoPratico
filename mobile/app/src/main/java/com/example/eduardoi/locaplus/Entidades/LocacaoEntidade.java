@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
+//ENTIDADE DA TELA DE LOCAÇÃO.
 public class LocacaoEntidade implements Serializable {
     private Integer id;
     private String dataLocacao;

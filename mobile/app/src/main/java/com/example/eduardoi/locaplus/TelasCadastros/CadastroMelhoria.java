@@ -1,4 +1,4 @@
-package com.example.eduardoi.locaplus.TelasCadastros;
+/*package com.example.eduardoi.locaplus.TelasCadastros;
 
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
@@ -72,4 +72,4 @@ public class CadastroMelhoria extends AppCompatActivity {
     public void acaoSair(View view){
         finish();
     }
-}
+}*/

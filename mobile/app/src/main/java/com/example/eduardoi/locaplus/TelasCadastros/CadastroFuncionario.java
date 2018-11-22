@@ -35,7 +35,7 @@ public class CadastroFuncionario extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cadastroveiculo);
+        setContentView(R.layout.activity_cadastrofuncionario);
 
         etNome = findViewById(R.id.etNome);
 

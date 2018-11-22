@@ -7,6 +7,33 @@
     tools:context=".TelasCadastros.Principal">
 
     <Button
+        android:id="@+id/btMelhoria"
+        android:layout_width="281dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp"
+        android:onClick="acaoMelhoria"
+        android:text="Melhorias"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btFuncionarios" />
+
+    <Button
+        android:id="@+id/btFuncionarios"
+        android:layout_width="281dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp"
+        android:onClick="acaoFuncionarios"
+        android:text="Funcionarios"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btVeiculos" />
+
+    <Button
         android:id="@+id/btVeiculos"
         android:layout_width="281dp"
         android:layout_height="wrap_content"

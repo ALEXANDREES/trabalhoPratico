@@ -7,12 +7,14 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class Banco extends SQLiteOpenHelper{
 
     public Banco(Context context) {
-        super(context, "TESTE12", null, 1);
+        super(context, "TESTE16", null, 1);
+        //CRIAÇÃO DO BANCO DE DADOS.
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
 
+        //CRIAÇÃO DA TABELA LOCACAO NO BANCO DE DADOS.
         String sqlLocacao = "CREATE TABLE IF NOT EXISTS LOCACAO(" +
                 "ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL," +
                 "DATALOCACAO VARCHAR(45)," +
@@ -51,6 +53,16 @@ public class Banco extends SQLiteOpenHelper{
                 "MELHORIA VARCHAR(250)," +
                 "DEPARTAMENTO VARCHAR(50))";
         db.execSQL(sqlMelhoria);
+
+        String sqlFuncionario = "CREATE TABLE IF NOT EXISTS FUNCIONARIO(" +
+                "ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL," +
+                "NOME VARCHAR(100)," +
+                "CPF VARCHAR(20)," +
+                "RG VARCHAR(20)," +
+                "ENDERECO VARCHAR(100)," +
+                "CARGO VARCHAR(20)," +
+                "DATA VARCHAR(20))";
+        db.execSQL(sqlFuncionario);
     }
 
     @Override

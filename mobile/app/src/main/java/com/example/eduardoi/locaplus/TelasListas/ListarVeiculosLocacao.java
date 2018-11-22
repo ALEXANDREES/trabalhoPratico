@@ -22,6 +22,8 @@ import com.example.eduardoi.locaplus.TelasCadastros.CadastroLocacao;
 import java.util.LinkedList;
 import java.util.List;
 
+
+//LISTA UTILIZADA PARA SELECIONAR O VEICULO NA HORA DE CADASTRAR A LOCAÇÃO.
 public class ListarVeiculosLocacao extends AppCompatActivity {
 
     Banco bd;

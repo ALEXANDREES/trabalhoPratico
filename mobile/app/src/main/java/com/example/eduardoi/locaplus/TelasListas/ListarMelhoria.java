@@ -1,4 +1,4 @@
-package com.example.eduardoi.locaplus.TelasListas;
+/*package com.example.eduardoi.locaplus.TelasListas;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -101,3 +101,4 @@ public class ListarMelhoria extends AppCompatActivity {
         listaMelhoria.setAdapter(arrayAdapter);
     }
 }
+*/

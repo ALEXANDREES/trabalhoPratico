@@ -22,6 +22,8 @@ import com.example.eduardoi.locaplus.TelasCadastros.EditarRemoverLocacao;
 import java.util.LinkedList;
 import java.util.List;
 
+
+//LISTA UTILIZADA PARA SELECIONAR O CLIENTE NA HORA DE EDITAR A LOCAÇÃO.
 public class ListarClientesLocacaoEditar extends AppCompatActivity {
 
     Banco bd;

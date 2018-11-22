@@ -29,8 +29,8 @@ public class CadastroLocacao extends AppCompatActivity {
     private SQLiteDatabase conexao;
     private LocacaoEntidade novaLocacao;
 
-    String dataEncerramento = "Não Informada";
-    String status = "ATIVA";
+    String dataEncerramento = "Não Informada";//SETANDO A DATA.
+    String status = "ATIVA";//SETANDO O STATUS DA LOCACAO.
 
 
     @Override
@@ -44,13 +44,14 @@ public class CadastroLocacao extends AppCompatActivity {
 
         etVeiculo = findViewById(R.id.etVeiculo);
 
-        Intent it = getIntent();
+        Intent it = getIntent();//PEGANDO DADOS DE OUTRAS TELAS.
 
-        etCliente.setText(it.getStringExtra("cliente"));
-        etVeiculo.setText(it.getStringExtra("veiculo"));
+        etCliente.setText(it.getStringExtra("cliente"));//PEGANDO O CLIENTE.
+        etVeiculo.setText(it.getStringExtra("veiculo"));//PEGANDO O VEICULO.
 
     }
 
+    //METODO PARA INSERIR OS DADOS INFORMADOS NOS CAMPOS E OS DADOS SETADOS NA TABELA LOCACAO.
     private void inserir(){
         bd = new Banco(this);
 
@@ -71,6 +72,7 @@ public class CadastroLocacao extends AppCompatActivity {
         }
     }
 
+    //AÇÃO DO BOTÃO QUE CRIA UMA NOVA LOCAÇÃO E PUXA O METODO DE INSERIR.
     public void acaoSalvar(View view){
 
         if(novaLocacao == null)
@@ -82,11 +84,13 @@ public class CadastroLocacao extends AppCompatActivity {
             finish();
     }
 
+    //AÇÃO DE SAIR DO BOTÃO.
     public void acaoSair(View view){
         finish();
     }
 
 
+    //PUXA O CLIENTE E O VEICULO DA LISTA ONDE O CLIENTE TEM UM RESULCODE 2 E O VEICULO UM RESULTCODE3.
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -97,11 +101,14 @@ public class CadastroLocacao extends AppCompatActivity {
         }
     }
 
+
+    //AÇÃO QUE ABRE A LISTA PARA ESCOLHER O CLIENTE.
     public void acaoEscolherCliente(View view){
         Intent it = new Intent(CadastroLocacao.this, ListarClientesLocacao.class);
         startActivityForResult(it,1);
     }
 
+    //AÇÃO QUE ABRE A LISTA PARA ESCOLHER O VEICULO.
     public void acaoEscolherVeiculo(View view){
         Intent it = new Intent(CadastroLocacao.this, ListarVeiculosLocacao.class);
         startActivityForResult(it,1);

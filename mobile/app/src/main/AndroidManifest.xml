@@ -31,6 +31,12 @@
         <activity android:name=".TelasCadastros.EncerrarLocacao" />
         <activity android:name=".TelasCadastros.EditarRemoverVeiculo" />
         <activity android:name=".TelasCadastros.EditarRemoverCliente" />
+        <activity android:name=".TelasCadastros.EditarRemoverFuncionario" />
+        <activity android:name=".TelasCadastros.EditarRemoverMelhoria" />
+        <activity android:name=".TelasListas.ListarFuncionario" />
+        <activity android:name=".TelasListas.ListarMelhoria" />
+        <activity android:name=".TelasCadastros.CadastroMelhoria" />
+
     </application>
 
 </manifest>

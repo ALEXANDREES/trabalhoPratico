@@ -1,6 +1,7 @@
 package com.example.eduardoi.locaplus.Dados;
 
 import com.example.eduardoi.locaplus.Entidades.ClientesEntidade;
+import com.example.eduardoi.locaplus.Entidades.FuncionarioEntidade;
 import com.example.eduardoi.locaplus.Entidades.LocacaoEntidade;
 import com.example.eduardoi.locaplus.Entidades.MelhoriaEntidade;
 import com.example.eduardoi.locaplus.Entidades.VeiculoEntidade;
@@ -49,6 +50,16 @@ public class Dao {
         else{
             novaMelhoria.setId(indice);
             lista.add(novaMelhoria);
+            indice++;
+        }
+    }
+
+    public static void salvarFuncionario(FuncionarioEntidade novoFuncionario) {
+        if(lista.contains(novoFuncionario))
+            lista.set(lista.indexOf(novoFuncionario), novoFuncionario);
+        else{
+            novoFuncionario.setId(indice);
+            lista.add(novoFuncionario);
             indice++;
         }
     }

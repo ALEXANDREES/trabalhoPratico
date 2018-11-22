@@ -4,9 +4,9 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -33,10 +33,11 @@ public class ListarLocacao extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listarlocacao);
         listaLocacoes = findViewById(R.id.listarLocacoes);
-        conexaoBD();
-        acoes();
+        conexaoBD();//CHAMADA DO METODO DE CONEXÃO.
+        acoes();//CHAMADA DO METODO DE AÇÕES.
     }
 
+    //AÇÃO QUE QUANDO CLICAR NA LISTA ABRE A TELA DE EDITAR PASSANDO OS VALORES DO ITEM SELECIONADO.
     private void acoes() {
         listaLocacoes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -49,13 +50,13 @@ public class ListarLocacao extends AppCompatActivity {
                 it.putExtra("veiculo", novaLocacao.getVeiculoLocacao());
                 it.putExtra("dataencerramento", novaLocacao.getDataEncerramento());
                 it.putExtra("km", novaLocacao.getKm());
-                //it.putExtra("status", novaLocacao.getStatus());
                 startActivity(it);
             }
         });
 
     }
 
+    //METODO DE CONEXÃO COM O BANCO.
     private void conexaoBD() {
         try {
             bd = new Banco(this);
@@ -69,6 +70,7 @@ public class ListarLocacao extends AppCompatActivity {
         }
     }
 
+    //METODO PARA LISTAR TODAS AS LOCAÇÕES.
     private List lista(){
         conexao = bd.getWritableDatabase();
         List locacoes =  new LinkedList();
@@ -90,11 +92,13 @@ public class ListarLocacao extends AppCompatActivity {
         return locacoes;
     }
 
+    //AÇÃO VINCULADA A UM BOTÃO QUE ABRE A TELA DE CADASTRO DE LOCAÇÃO.
     public void acaoCadastrar(View view){
         Intent it = new Intent(ListarLocacao.this, CadastroLocacao.class);
         startActivity(it);
     }
 
+    //AÇÃO PARA SAIR DA TELA.
     public void acaoSair(View view){
         finish();
     }

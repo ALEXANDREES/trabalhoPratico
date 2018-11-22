@@ -21,6 +21,8 @@ import com.example.eduardoi.locaplus.TelasCadastros.EditarRemoverLocacao;
 import java.util.LinkedList;
 import java.util.List;
 
+
+//LISTA UTILIZADA PARA SELECIONAR O VEICULO NA HORA DE EDITAR A LOCAÇÃO.
 public class ListarVeiculosLocacaoEditar extends AppCompatActivity {
 
     Banco bd;

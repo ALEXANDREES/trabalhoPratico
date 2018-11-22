@@ -1,15 +1,16 @@
 package com.example.eduardoi.locaplus.TelasCadastros;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.eduardoi.locaplus.R;
 import com.example.eduardoi.locaplus.TelasListas.ListarClientes;
+import com.example.eduardoi.locaplus.TelasListas.ListarFuncionario;
 import com.example.eduardoi.locaplus.TelasListas.ListarLocacao;
-import com.example.eduardoi.locaplus.TelasListas.ListarMelhoria;
 import com.example.eduardoi.locaplus.TelasListas.ListarVeiculos;
+
 
 public class Principal extends AppCompatActivity {
 
@@ -34,9 +35,14 @@ public class Principal extends AppCompatActivity {
         startActivity(it);
     }
 
-    public void acaoMelhoria(View view){
-        Intent it = new Intent(Principal.this, ListarMelhoria.class);
+    public void acaoFuncionarios(View view){
+        Intent it = new Intent(Principal.this, ListarFuncionario.class);
         startActivity(it);
     }
+
+    //public void acaoMelhoria(View view){
+    //    Intent it = new Intent(Principal.this, ListarMelhoria.class);
+     //   startActivity(it);
+    //}
 
 }

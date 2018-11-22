@@ -24,7 +24,7 @@ public class EditarRemoverFuncionario extends AppCompatActivity {
     private EditText editRg;
     private EditText editEndereco;
     private EditText editCargo;
-    private EditText editData;
+    //private EditText editData;
 
     @SuppressLint("WrongConstant")
     @Override
@@ -39,14 +39,14 @@ public class EditarRemoverFuncionario extends AppCompatActivity {
         editRg = findViewById(R.id.etRg);
         editEndereco= findViewById(R.id.etEndereco);
         editCargo= findViewById(R.id.etCargo);
-        editData= findViewById(R.id.etData);
+        //editData= findViewById(R.id.etData);
 
         editNome.setText(it.getStringExtra("nome"));
         editCpf.setText(it.getStringExtra("cpf"));
         editRg.setText(it.getStringExtra("rg"));
         editEndereco.setText(it.getStringExtra("endereco"));
         editCargo.setText(it.getStringExtra("cargo"));
-        editData.setText(it.getStringExtra("data"));
+        //editData.setText(it.getStringExtra("data"));
 
 
 
@@ -61,7 +61,7 @@ public class EditarRemoverFuncionario extends AppCompatActivity {
                 values.put("RG", editRg.getText().toString());
                 values.put("ENDERECO", editEndereco.getText().toString());
                 values.put("CARGO", editCargo.getText().toString());
-                values.put("DATA", editData.getText().toString());
+                //values.put("DATA", editData.getText().toString());
 
                 if (conexao.update("FUNCIONARIO", values, "ID = ?", new String[]{String.valueOf(it.getIntExtra("id",0))}) > 0) {
                     conexao.close();

@@ -1,4 +1,4 @@
-package com.example.eduardoi.locaplus.TelasCadastros;
+/*package com.example.eduardoi.locaplus.TelasCadastros;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
@@ -100,3 +100,4 @@ public class EditarRemoverMelhoria extends AppCompatActivity {
         finish();
     }
 }
+*/
