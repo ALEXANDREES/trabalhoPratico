@@ -32,16 +32,24 @@ include "conexao.php";
                       <span class="sr-only">(current)</span></a>
                   </li>
 
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Veiculos</a>
+				  <li class="nav-item">
+					<a class="nav-link" href="listarVeiculo.php">Veiculos</a>
                   </li>
-
+				  
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Locação</a>
+                    <a class="nav-link" href="listarLocacao.php">Locação</a>
                   </li>
-
+				  
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
+                    <a class="nav-link" href="listarCliente.php">Cliente</a>
+                  </li>
+			
+			      <li class="nav-item">
+                    <a class="nav-link" href="listarFuncionario.php">Funcionario</a>
+                  </li>
+			
+			      <li class="nav-item">
+                    <a class="nav-link" href="listarMelhoria.php">Melhoria</a>
                   </li>
 
                 </ul>
