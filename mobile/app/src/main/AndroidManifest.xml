@@ -30,6 +30,7 @@
         <activity android:name=".TelasListas.ListarVeiculosLocacaoEditar" />
         <activity android:name=".TelasCadastros.EncerrarLocacao" />
         <activity android:name=".TelasCadastros.EditarRemoverVeiculo" />
+        <activity android:name=".TelasCadastros.EditarRemoverCliente" />
     </application>
 
 </manifest>

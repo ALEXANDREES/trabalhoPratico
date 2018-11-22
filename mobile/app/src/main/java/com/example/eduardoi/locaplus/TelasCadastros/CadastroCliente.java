@@ -14,20 +14,21 @@ import com.example.eduardoi.locaplus.R;
 
 public class CadastroCliente extends AppCompatActivity {
 
-    private EditText etNome;
+    private EditText etnome;
 
-    private EditText etRg;
+    private EditText etrg;
 
-    private EditText etCpf;
+    private EditText etcpf;
 
-    private EditText etEndereco;
+    private EditText etendereco;
 
-    private EditText etCnh;
+    private EditText etcnh;
 
-    private EditText etNumeroDependentes;
+    private EditText etndependentes;
 
 
     Banco bd;
+
     private SQLiteDatabase conexao;
     private ClientesEntidade novoCliente;
 
@@ -37,21 +38,22 @@ public class CadastroCliente extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrocliente);
 
-        etNome = findViewById(R.id.editText);
+        etnome = findViewById(R.id.etnome);
 
-        etRg = findViewById(R.id.editText2);
+        etrg = findViewById(R.id.etrg);
 
-        etCpf = findViewById(R.id.editText3);
+        etcpf = findViewById(R.id.etcpf);
 
-        etEndereco = findViewById(R.id.editText4);
+        etendereco = findViewById(R.id.etendereco);
 
-        etCnh = findViewById(R.id.editText5);
+        etcnh = findViewById(R.id.etcnh);
 
-        etNumeroDependentes = findViewById(R.id.editText6);
+        etndependentes = findViewById(R.id.etndependentes);
 
     }
 
     private void inserir(){
+
         bd = new Banco(this);
 
         try {
@@ -66,24 +68,26 @@ public class CadastroCliente extends AppCompatActivity {
 
             conexao.insert("CLIENTE", null, values);
             conexao.close();
-            Toast.makeText(this, "Cliente cadastrado com sucesso!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Cliente cadastrado com Sucesso", Toast.LENGTH_SHORT).show();
         }catch (android.database.SQLException e){
-            Toast.makeText(this, "Erro ao cadastrar o cliente!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Erro ao cadastrar o Cliente", Toast.LENGTH_SHORT).show();
         }
     }
 
     public void acaoSalvar(View view){
 
-        if(novoCliente == null)
+        if(novoCliente == null) {
+
             novoCliente = new ClientesEntidade();
-            novoCliente.setNomeCliente(etNome.getText().toString());
-            novoCliente.setRgCliente(etRg.getText().toString());
-            novoCliente.setCpfCliente(etCpf.getText().toString());
-            novoCliente.setEnderecoCliente(etEndereco.getText().toString());
-            novoCliente.setCnhCliente(etCnh.getText().toString());
-            novoCliente.setNumeroDependentes(etNumeroDependentes.getText().toString());
+            novoCliente.setNomeCliente(etnome.getText().toString());
+            novoCliente.setRgCliente(etrg.getText().toString());
+            novoCliente.setCpfCliente(etcpf.getText().toString());
+            novoCliente.setEnderecoCliente(etendereco.getText().toString());
+            novoCliente.setCnhCliente(etcnh.getText().toString());
+            novoCliente.setNumeroDependentes(etndependentes.getText().toString());
             inserir();
             finish();
+        }
     }
 
     public void acaoSair(View view){

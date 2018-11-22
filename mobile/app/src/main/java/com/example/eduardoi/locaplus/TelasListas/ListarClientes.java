@@ -15,9 +15,12 @@ import android.widget.Toast;
 
 import com.example.eduardoi.locaplus.Dados.Banco;
 import com.example.eduardoi.locaplus.Entidades.ClientesEntidade;
+import com.example.eduardoi.locaplus.Entidades.VeiculoEntidade;
 import com.example.eduardoi.locaplus.R;
 import com.example.eduardoi.locaplus.TelasCadastros.CadastroCliente;
+import com.example.eduardoi.locaplus.TelasCadastros.EditarRemoverCliente;
 import com.example.eduardoi.locaplus.TelasCadastros.EditarRemoverLocacao;
+import com.example.eduardoi.locaplus.TelasCadastros.EditarRemoverVeiculo;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -41,11 +44,16 @@ public class ListarClientes extends AppCompatActivity {
         listaClientes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                Intent it = getIntent();
+                Intent it = new Intent(ListarClientes.this, EditarRemoverCliente.class);
                 ClientesEntidade novoCliente = (ClientesEntidade) adapterView.getItemAtPosition(position);
-                it.putExtra("cliente", novoCliente.getNomeCliente());
-                setResult(2, it);
-                finish();
+                it.putExtra("id", novoCliente.getId());
+                it.putExtra("nome", novoCliente.getNomeCliente());
+                it.putExtra("rg", novoCliente.getRgCliente());
+                it.putExtra("cpf", novoCliente.getCpfCliente());
+                it.putExtra("endereco", novoCliente.getEnderecoCliente());
+                it.putExtra("cnh", novoCliente.getCnhCliente());
+                it.putExtra("ndependentes", novoCliente.getNumeroDependentes());
+                startActivity(it);
             }
         });
     }
