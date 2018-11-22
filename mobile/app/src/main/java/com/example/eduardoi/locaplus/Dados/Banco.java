@@ -45,7 +45,12 @@ public class Banco extends SQLiteOpenHelper{
                 "COR VARCHAR(10))";
         db.execSQL(sqlVeiculo);
 
-
+        String sqlMelhoria = "CREATE TABLE IF NOT EXISTS MELHORIA(" +
+                "ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL," +
+                "FUNCIONARIO VARCHAR(50)," +
+                "MELHORIA VARCHAR(250)," +
+                "DEPARTAMENTO VARCHAR(50))";
+        db.execSQL(sqlMelhoria);
     }
 
     @Override

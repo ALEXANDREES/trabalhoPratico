@@ -2,6 +2,7 @@ package com.example.eduardoi.locaplus.Dados;
 
 import com.example.eduardoi.locaplus.Entidades.ClientesEntidade;
 import com.example.eduardoi.locaplus.Entidades.LocacaoEntidade;
+import com.example.eduardoi.locaplus.Entidades.MelhoriaEntidade;
 import com.example.eduardoi.locaplus.Entidades.VeiculoEntidade;
 
 import java.util.LinkedList;
@@ -32,12 +33,22 @@ public class Dao {
         }
     }
 
-    public static void salvarCliente(VeiculoEntidade novoVeiculo) {
+    public static void salvarVeiculo(VeiculoEntidade novoVeiculo) {
         if(lista.contains(novoVeiculo))
             lista.set(lista.indexOf(novoVeiculo), novoVeiculo);
         else{
             novoVeiculo.setId(indice);
             lista.add(novoVeiculo);
+            indice++;
+        }
+    }
+
+    public static void salvarMelhoria(MelhoriaEntidade novaMelhoria) {
+        if(lista.contains(novaMelhoria))
+            lista.set(lista.indexOf(novaMelhoria), novaMelhoria);
+        else{
+            novaMelhoria.setId(indice);
+            lista.add(novaMelhoria);
             indice++;
         }
     }
