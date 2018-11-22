@@ -48,13 +48,13 @@ include "conexao.php";
               <a class="nav-link" href="cadastrarlocacao.php">Locação</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="cadastrocliente.php">Cliente</a>
+              <a class="nav-link" href="cadastrarcliente.php">Cliente</a>
             </li>
 			<li class="nav-item">
               <a class="nav-link" href="cadastrofuncionario.php">Funcionario</a>
             </li>
 			<li class="nav-item">
-              <a class="nav-link" href="listarMelhoria.php">Melhoria</a>
+              <a class="nav-link" href="cadastrarMelhoria.php">Melhoria</a>
             </li>
           </ul>
         </div>
